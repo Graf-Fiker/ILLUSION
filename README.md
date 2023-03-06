@@ -1,2 +1,2 @@
 # ILLUSION
-Website For Weekly Maintenance changes for the Illusion alliance in Pso2 MGS
+Website For Weekly Maintenance changes for the Illusion alliance in Pso2 NGS
