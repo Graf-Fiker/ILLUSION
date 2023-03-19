@@ -90,3 +90,9 @@
   }
 }
 
+body {
+  background: url("../../assets/img/dsadada.png") top / cover no-repeat;
+  overflow-x: hidden;
+  overflow-y: overlay;
+}
+
