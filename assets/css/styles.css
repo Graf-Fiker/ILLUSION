@@ -96,3 +96,52 @@ body {
   overflow-y: overlay;
 }
 
+.text-center.d-xl-flex {
+}
+
+@media (min-width: 300px) {
+  .d-flex.float-left.justify-content-center.align-items-center.justify-content-xl-center.align-items-xl-center {
+    height: 40px;
+    width: 100%;
+    background: rgba(255,255,255,0.44);
+    backdrop-filter: blur(5px);
+    margin-bottom: 10px;
+    border-radius: 13px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .d-flex.float-left.justify-content-center.align-items-center.justify-content-xl-center.align-items-xl-center {
+    height: 40px;
+    width: 60%;
+    background: rgba(255,255,255,0.44);
+    backdrop-filter: blur(5px);
+    margin-bottom: 10px;
+    border-radius: 13px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+  }
+}
+
+#myBox {
+  display: none;
+  background-color: #e6e6e6;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#my-box {
+  bottom: 0;
+  background-color: #aa0000;
+  padding: 2px;
+  position: fixed;
+  display: none;
+  width: 100%;
+  border-width: 21px;
+  border-color: #ff0000;
+}
+

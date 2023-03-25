@@ -113,3 +113,11 @@ img {
   border-radius: 5px;
 }
 
+.scrollable-content {
+  scrollbar-width: thin;
+  scrollbar-color: #ddd transparent;
+  border-radius: 3px;
+  scrollbar-width: thin;
+  border-radius: 3px;
+}
+
