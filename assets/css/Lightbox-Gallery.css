@@ -80,6 +80,8 @@
 
 #countdown-container {
   text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 #countdown {
@@ -87,6 +89,8 @@
   justify-content: center;
   align-items: center;
   font-size: 4px;
+  font-family: 'Aldrich';
+  margin-top: 2px;
 }
 
 .countdown-section {
@@ -104,5 +108,9 @@
 .countdown-period {
   font-size: 11px;
   position: flex;
+}
+
+#countdown-container.show {
+  opacity: 1;
 }
 
