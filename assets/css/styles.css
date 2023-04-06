@@ -347,3 +347,27 @@ body {
   backdrop-filter: blur(5px);
 }
 
+@media (min-width: 300px) {
+  .d-flex.d-xl-flex.justify-content-center.align-items-center.mx-auto.justify-content-xl-center.align-items-xl-center {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 1px;
+    color: #9e00ff;
+    text-align: left;
+    background: rgba(255,255,255,0.26);
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .d-flex.d-xl-flex.justify-content-center.align-items-center.mx-auto.justify-content-xl-center.align-items-xl-center {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 1px;
+    color: #9e00ff;
+    text-align: left;
+    background: rgba(255,255,255,0.26);
+    width: 93%;
+  }
+}
+
