@@ -4,4 +4,5 @@
 	url(../../assets/fonts/VVTheRubyDuo-SemiExpBlack.woff) format('woff');
 	font-weight: 900;
 	font-style: normal;
+	font-display: auto;
 }

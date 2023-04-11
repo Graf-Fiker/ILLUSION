@@ -16,6 +16,12 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+  // Format the numbers with leading zeros
+  days = days.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+  hours = hours.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+  minutes = minutes.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+  seconds = seconds.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+
   // Display the remaining time in the countdown sections
   document.getElementById("days").innerHTML = days;
   document.getElementById("hours").innerHTML = hours;

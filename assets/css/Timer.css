@@ -1,0 +1,132 @@
+.photo-gallery {
+  color: #313437;
+  background-color: #fff;
+}
+
+.photo-gallery p {
+  color: #7d8285;
+}
+
+.photo-gallery h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+  padding-top: 40px;
+  color: inherit;
+}
+
+@media (max-width:767px) {
+  .photo-gallery h2 {
+    margin-bottom: 25px;
+    padding-top: 25px;
+    font-size: 24px;
+  }
+}
+
+.photo-gallery .intro {
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto 40px;
+}
+
+.photo-gallery .intro p {
+  margin-bottom: 0;
+}
+
+.photo-gallery .photos {
+  padding-bottom: 20px;
+}
+
+.photo-gallery .item {
+  padding-bottom: 30px;
+}
+
+.countdown-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.countdown-amount {
+}
+
+.countdown-period {
+}
+
+.countdown-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+  position: relative;
+}
+
+.countdown-amount {
+  z-index: 2;
+}
+
+.countdown-period {
+  position: fixed;
+  bottom: 7px;
+  z-index: 1;
+}
+
+#countdown-container {
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4px;
+  font-family: 'Aldrich';
+  margin-top: 2px;
+}
+
+.countdown-section {
+  /*display: flex;*/
+  flex-direction: column;
+  align-items: center;
+  margin: 0 30px;
+}
+
+.countdown-amount {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  position: fixed;
+}
+
+.countdown-period {
+  font-size: 13px;
+  text-align: center;
+}
+
+#countdown-container.show {
+  opacity: 1;
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+button:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+button.clicked {
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF00FF, 0 0 70px #FF00FF, 0 0 80px #FF00FF, 0 0 100px #FF00FF;
+}
+
