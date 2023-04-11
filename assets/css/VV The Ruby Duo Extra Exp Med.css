@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'VV The Ruby Duo Extra Exp Med';
+	src: url(../../assets/fonts/VVTheRubyDuo-ExtraExpMed.woff2) format('woff2'),
+	url(../../assets/fonts/VVTheRubyDuo-ExtraExpMed.woff) format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: auto;
+}
