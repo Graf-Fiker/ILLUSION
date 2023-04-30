@@ -241,7 +241,7 @@ body {
 
 .fav-icon {
   border-style: solid;
-  background: url("../../assets/img/25.png") center / contain, linear-gradient(-38deg, rgba(255,255,255,0.61), rgba(255,255,255,0.39) 18%, rgba(255,255,255,0.11) 38%, rgba(255,255,255,0.12) 52%, white), rgba(255,255,255,0);
+  background: url("../../assets/img/25.png") center / contain, linear-gradient(-38deg, rgba(255,255,255,0.61), rgba(255,255,255,0.39) 18%, rgba(255,255,255,0.42) 38%, rgba(255,255,255,0.57) 52%, white), rgba(255,255,255,0);
   background-blend-mode: soft-light;
   border-width: 3px;
   border-color: #9e00ff;
