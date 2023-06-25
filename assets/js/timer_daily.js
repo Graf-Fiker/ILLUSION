@@ -19,6 +19,11 @@ function updateTimer() {
   if (timeDiff <= 0) {
     timerElement.textContent = "Timer expired!";
     clearInterval(timerInterval);
+    setTimeout(function() {
+      // Reset the timer after 1 second
+      updateTimer();
+      timerInterval = setInterval(updateTimer, 1000);
+    }, 1000);
   }
 }
 
