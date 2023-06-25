@@ -36,10 +36,18 @@ window.addEventListener('popstate', function(event) {
       activateTab(appState.activeTab);
     }
   } else {
-    activateTab('page1');
-    appState.activeTab = 'page1'; // Set 'page1' as the active tab in appState
-    saveAppState();
-    history.replaceState(appState, null); // Update the browser's history with 'page1' as the initial state
+    if (appState.tabHistory.length > 0) {
+      var previousTab = appState.tabHistory.pop(); // Get the previous tab from the history
+      activateTab(previousTab);
+      appState.activeTab = previousTab; // Update the active tab in appState
+      saveAppState();
+      history.replaceState(appState, null); // Update the browser's history with the updated state
+    } else {
+      activateTab('page1');
+      appState.activeTab = 'page1'; // Set 'page1' as the active tab in appState
+      saveAppState();
+      history.replaceState(appState, null); // Update the browser's history with 'page1' as the initial state
+    }
   }
 });
 
