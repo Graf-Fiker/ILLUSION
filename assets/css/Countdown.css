@@ -18,12 +18,8 @@ p.text-countdown {
   margin: 0;
 }
 
-.row {
-}
-
-.col {
-}
-
-div {
+.parallax-content p {
+  font-size: 1.5em;
+  text-align: center;
 }
 

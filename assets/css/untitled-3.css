@@ -1,0 +1,5 @@
+.dropdown-item:focus, .dropdown-item:hover {
+  color: var(--bs-warning);
+  background-color: var(--bs-gray-800);
+}
+
