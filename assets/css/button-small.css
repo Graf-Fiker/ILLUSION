@@ -1,0 +1,76 @@
+button:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+#page1 {
+  height: 90%;
+}
+
+@media (min-width: 300px) {
+  .dropdown {
+    right: 0;
+    position: absolute;
+  }
+}
+
+.scrollable-content {
+  max-height: 200px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #ddd transparent;
+}
+
+/* Webkit (Safari and Chrome) */
+
+@media (min-width: 1400px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+
+@media (min-width: 1400px) {
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 1400px) {
+  ::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 3px;
+  }
+}
+
+/* Firefox */
+
+@media (min-width: 1400px) {
+  .scrollable-content {
+    scrollbar-color: #ddd transparent;
+    scrollbar-width: thin;
+  }
+}
+
+@media (min-width: 1400px) {
+  .scrollable-content::-moz-scrollbar {
+    width: 6px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .scrollable-content::-moz-scrollbar-track {
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 1400px) {
+  .scrollable-content::-moz-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 3px;
+  }
+}
+
+#timer {
+  font-size: 24px;
+}
+

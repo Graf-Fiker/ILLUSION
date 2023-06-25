@@ -1,0 +1,140 @@
+@media (min-width: 300px) {
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1400px) {
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    bottom: -71px;
+  }
+}
+
+.nav-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-btn.active {
+  color: #ffffff;
+}
+
+@media (min-width: 300px) {
+  .tab-content {
+    width: 100%;
+    /*height: 100px;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 700px;
+    padding-bottom: 43px;
+  }
+}
+
+.tab-content.active {
+  display: block;
+}
+
+header {
+  height: 50px;
+  position: relative;
+  width: 100%;
+  color: var(--bs-indigo);
+  background: var(--bs-gray-600);
+  z-index: 2;
+  top: 0;
+}
+
+@media (min-width: 1400px) {
+  #page3 {
+    width: 600px;
+    display: block;
+    margin-left: 1267px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  img {
+    padding-right: 10px;
+    width: 40.7812px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  img {
+    padding-right: 10px;
+    width: 40.7812px;
+    filter: invert 100%;
+  }
+}
+
+@media (color-scheme: light) {
+  img {
+    padding-right: 10px;
+    width: 40.7812px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  img {
+    padding-right: 10px;
+    width: 40.7812px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  img {
+    padding-right: 10px;
+    width: 40.7812px;
+  }
+}
+
+img {
+  padding-right: 10px;
+  width: 40.7812px;
+}
+
+@media (prefers-color-scheme: light) {
+  img {
+    padding-right: 10px;
+    width: 40.7812px;
+    filter: invert(100%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  img {
+    /*filter: invert(100%);*/
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  img {
+    filter: invert(0%);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  img {
+    /*filter: invert(100%);*/
+  }
+}
+
