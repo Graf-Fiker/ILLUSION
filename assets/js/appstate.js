@@ -38,9 +38,11 @@ window.addEventListener('popstate', function(event) {
 
   if (tabHistory.length > 0) {
     var previousTab = tabHistory.pop();
-    activateTab(previousTab); // Activate the previous tab from history
-    appState.activeTab = previousTab;
-    saveAppState();
+    if (appState.activeTab !== previousTab) {
+      activateTab(previousTab); // Activate the previous tab from history
+      appState.activeTab = previousTab;
+      saveAppState();
+    }
   }
 });
 
