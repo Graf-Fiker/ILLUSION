@@ -19,6 +19,12 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     activateTab('page1'); // Default tab if no previous state found
   }
+
+  // Add event listener to handle back button
+  window.addEventListener('popstate', function(event) {
+    var tabId = event.state ? event.state.activeTab : 'page1';
+    activateTab(tabId);
+  });
 });
 
 function activateTab(tabId) {
@@ -39,4 +45,7 @@ function activateTab(tabId) {
   // Update the activeTab variable and store it in localStorage
   activeTab = Array.from(tabs).indexOf(tab);
   localStorage.setItem('activeTab', tabId);
+
+  // Update the browser history state
+  history.pushState({ activeTab: tabId }, '', '');
 }
