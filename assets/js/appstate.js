@@ -1,51 +1,61 @@
 var navButtons = document.querySelectorAll('.nav-btn');
 var tabs = document.querySelectorAll('.tab-content');
-var activeTab;
+var appState = {
+  activeTab: null
+};
 
-// Add event listeners to navigation buttons
 for (var i = 0; i < navButtons.length; i++) {
   navButtons[i].addEventListener('click', function() {
     var tabId = this.getAttribute('data-tab');
     activateTab(tabId);
+    appState.activeTab = tabId;
+    saveAppState();
+    history.pushState(appState, null); // Update the browser's history
   });
 }
 
-// Add event listener to handle initial tab activation
-document.addEventListener('DOMContentLoaded', function() {
-  // Retrieve the previously active tab from localStorage
-  activeTab = localStorage.getItem('activeTab');
-  if (activeTab) {
-    activateTab(activeTab);
+window.addEventListener('popstate', function(event) {
+  if (event.state) {
+    appState = event.state;
+    if (appState.activeTab) {
+      activateTab(appState.activeTab);
+    }
   } else {
-    activateTab('page1'); // Default tab if no previous state found
+    activateTab('page1');
   }
+});
 
-  // Add event listener to handle back button
-  window.addEventListener('popstate', function(event) {
-    var tabId = event.state ? event.state.activeTab : 'page1';
-    activateTab(tabId);
-  });
+document.addEventListener('DOMContentLoaded', function() {
+  restoreAppState();
+  history.replaceState(appState, null); // Set initial state in the browser's history
 });
 
 function activateTab(tabId) {
-  // Remove 'active' class from all navigation buttons and tabs
   for (var i = 0; i < navButtons.length; i++) {
     navButtons[i].classList.remove('active');
   }
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].classList.remove('active');
   }
-
-  // Add 'active' class to the selected tab and navigation button
   var tabButton = document.querySelector('[data-tab="' + tabId + '"]');
   var tab = document.querySelector('#' + tabId);
   tabButton.classList.add('active');
   tab.classList.add('active');
+  appState.activeTab = Array.from(tabs).indexOf(tab);
+}
 
-  // Update the activeTab variable and store it in localStorage
-  activeTab = Array.from(tabs).indexOf(tab);
-  localStorage.setItem('activeTab', tabId);
+function saveAppState() {
+  localStorage.setItem('appState', JSON.stringify(appState));
+}
 
-  // Update the browser history state
-  history.pushState({ activeTab: tabId }, '', '');
+function restoreAppState() {
+  var savedAppState = localStorage.getItem('appState');
+  if (savedAppState) {
+    appState = JSON.parse(savedAppState);
+    if (appState.activeTab) {
+      activateTab(appState.activeTab);
+    }
+  } else {
+    activateTab('page1');
+  }
 }
