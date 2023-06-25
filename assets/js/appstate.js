@@ -32,6 +32,8 @@ window.addEventListener('popstate', function(event) {
     }
   } else {
     activateTab('page1');
+    appState.activeTab = 'page1'; // Set 'page1' as the active tab in appState
+    saveAppState();
   }
 
   if (tabHistory.length > 0) {
@@ -70,5 +72,7 @@ function restoreAppState() {
   } else {
     activateTab('page1');
     tabHistory.push('page1'); // Add 'page1' to the history
+    appState.activeTab = 'page1'; // Set 'page1' as the active tab in appState
+    saveAppState();
   }
 }
