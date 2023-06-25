@@ -4,6 +4,12 @@ function updateTimer() {
   var target = new Date(); // Target date and time
   target.setHours(14, 0, 0); // Set the target time to 14:00
 
+  // Check if the current time is already past the target time for today
+  if (now > target) {
+    // Increment the target date by 1 day
+    target.setDate(target.getDate() + 1);
+  }
+
   var timeDiff = target - now; // Calculate the time difference in milliseconds
 
   // Calculate hours, minutes, and seconds
