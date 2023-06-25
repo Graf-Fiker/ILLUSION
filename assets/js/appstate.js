@@ -20,6 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
   activateTab('page1');
 });
 
+window.addEventListener('popstate', function(event) {
+  var tabId = event.state ? event.state.tabId : 'page1';
+  activateTab(tabId);
+});
+
 function activateTab(tabId) {
   for (var i = 0; i < navButtons.length; i++) {
     navButtons[i].classList.remove('active');
@@ -33,4 +38,5 @@ function activateTab(tabId) {
   tab.classList.add('active');
   activeTab = Array.from(tabs).indexOf(tab);
   localStorage.setItem('activeTab', activeTab);
+  history.pushState({ tabId: tabId }, null, null);
 }
