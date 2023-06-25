@@ -38,5 +38,11 @@ function activateTab(tabId) {
   tab.classList.add('active');
   activeTab = Array.from(tabs).indexOf(tab);
   localStorage.setItem('activeTab', activeTab);
-  history.pushState({ tabId: tabId }, null, null);
+  if (tabId !== 'page1') {
+    history.pushState({ tabId: tabId }, null, null);
+  }
 }
+
+window.addEventListener('beforeunload', function(event) {
+  localStorage.removeItem('activeTab');
+});
