@@ -31,12 +31,15 @@ window.addEventListener('popstate', function(event) {
     activateTab('page1');
   }
 
-  if (tabHistory.length > 0) {
-    tabHistory.pop(); // Remove the current tab from history
-    if (tabHistory.length > 0) {
-      var previousTab = tabHistory[tabHistory.length - 1];
-      activateTab(previousTab); // Activate the previous tab from history
-    }
+  var currentTab = appState.activeTab;
+  if (tabHistory.length > 0 && tabHistory[tabHistory.length - 1] !== currentTab) {
+    // Remove the current tab from history if it doesn't match the app state
+    tabHistory.pop();
+  }
+
+  if (tabHistory.length > 1) {
+    var previousTab = tabHistory[tabHistory.length - 2];
+    activateTab(previousTab); // Activate the previous tab from history
   }
 });
 
@@ -51,7 +54,7 @@ function activateTab(tabId) {
   var tab = document.querySelector('#' + tabId);
   tabButton.classList.add('active');
   tab.classList.add('active');
-  appState.activeTab = Array.from(tabs).indexOf(tab);
+  appState.activeTab = tabId;
 }
 
 function saveAppState() {
@@ -64,8 +67,10 @@ function restoreAppState() {
     appState = JSON.parse(savedAppState);
     if (appState.activeTab) {
       activateTab(appState.activeTab);
+      tabHistory.push(appState.activeTab); // Add the active tab to the history
     }
   } else {
     activateTab('page1');
+    tabHistory.push('page1'); // Add 'page1' to the history
   }
 }
