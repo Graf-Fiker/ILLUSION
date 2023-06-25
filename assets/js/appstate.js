@@ -1,34 +1,48 @@
-// Define your app's state
-const appState = {
-  currentPage: 'page1',
-  // other state properties...
+var navButtons = document.querySelectorAll('.nav-btn');
+var tabs = document.querySelectorAll('.tab-content');
+var appState = {
+  activeTab: null
 };
 
-// Update the app's state
-function updateAppState(newState) {
-  Object.assign(appState, newState);
-  // Perform any additional logic based on the updated state
+for (var i = 0; i < navButtons.length; i++) {
+  navButtons[i].addEventListener('click', function() {
+    var tabId = this.getAttribute('data-tab');
+    activateTab(tabId);
+    appState.activeTab = tabId;
+    saveAppState();
+  });
 }
 
-// Handle back button press
-function handleBackButton() {
-  // Perform any necessary state updates or custom actions
-  // For example, you can change the current page based on the app's state
+document.addEventListener('DOMContentLoaded', function() {
+  restoreAppState();
+});
 
-  switch (appState.currentPage) {
-    case 'page1':
-      // Logic for back button press on the home page
-      break;
-    case 'page2':
-      // Logic for back button press on the about page
-      break;
-    case 'page3':
-      // Logic for back button press on the contact page
-      break;
-    default:
-      // Default logic when the current page is unknown
+function activateTab(tabId) {
+  for (var i = 0; i < navButtons.length; i++) {
+    navButtons[i].classList.remove('active');
+  }
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove('active');
+  }
+  var tabButton = document.querySelector('[data-tab="' + tabId + '"]');
+  var tab = document.querySelector('#' + tabId);
+  tabButton.classList.add('active');
+  tab.classList.add('active');
+  appState.activeTab = Array.from(tabs).indexOf(tab);
+}
+
+function saveAppState() {
+  localStorage.setItem('appState', JSON.stringify(appState));
+}
+
+function restoreAppState() {
+  var savedAppState = localStorage.getItem('appState');
+  if (savedAppState) {
+    appState = JSON.parse(savedAppState);
+    if (appState.activeTab) {
+      activateTab(appState.activeTab);
+    }
+  } else {
+    activateTab('page1');
   }
 }
-
-// Add event listener for back button press
-window.addEventListener('popstate', handleBackButton);
