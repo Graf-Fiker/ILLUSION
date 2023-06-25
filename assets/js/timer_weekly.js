@@ -7,12 +7,6 @@ function updateTimer() {
   target.setHours(4, 0, 0);
   target.setDate(target.getDate() + ((3 - target.getDay() + 7) % 7));
 
-  // Check if the current time is already past the target time for today
-  if (now > target) {
-    // Increment the target date by 1 week
-    target.setDate(target.getDate() + 7);
-  }
-
   var timeDiff = target - now; // Calculate the time difference in milliseconds
 
   // Calculate days, hours, minutes, and seconds
@@ -24,21 +18,10 @@ function updateTimer() {
   // Display the timer
   var timerElement = document.getElementById("timer_weekly");
   timerElement.textContent = "TIME REMAINING: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-
-  // Check if the timer has reached 0
-  if (timeDiff <= 0) {
-    timerElement.textContent = "Timer expired!";
-    clearInterval(timerInterval);
-    setTimeout(function() {
-      // Reset the timer after 1 second
-      updateTimer();
-      timerInterval = setInterval(updateTimer, 1000);
-    }, 1000);
-  }
 }
 
 // Update the timer immediately
 updateTimer();
 
 // Update the timer every second
-var timerInterval = setInterval(updateTimer, 1000);
+setInterval(updateTimer, 1000);
