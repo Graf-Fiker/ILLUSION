@@ -14,7 +14,15 @@ document.addEventListener('DOMContentLoaded', function() {
       var tabId = this.getAttribute('data-tab');
       activateTab(tabId);
       appState.activeTab = tabId;
-      appState.tabHistory.push(tabId); // Add the current tab to the history
+
+      if (tabId !== 'page1') {
+        var page1Index = appState.tabHistory.indexOf('page1');
+        if (page1Index !== -1) {
+          appState.tabHistory.splice(page1Index, 1); // Remove 'page1' from the tab history
+        }
+        appState.tabHistory.push(tabId); // Add the current tab to the history
+      }
+
       saveAppState();
       history.pushState(appState, null); // Update the browser's history
     });
