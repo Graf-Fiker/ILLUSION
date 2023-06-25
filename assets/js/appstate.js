@@ -3,7 +3,6 @@ var tabs = document.querySelectorAll('.tab-content');
 var appState = {
   activeTab: null
 };
-var tabHistory = []; // Array to store tab history
 
 document.addEventListener('DOMContentLoaded', function() {
   restoreAppState();
@@ -30,6 +29,7 @@ window.addEventListener('popstate', function(event) {
     activateTab('page1');
     appState.activeTab = 'page1'; // Set 'page1' as the active tab in appState
     saveAppState();
+    history.replaceState(appState, null); // Update the browser's history with 'page1' as the initial state
   }
 });
 
@@ -61,5 +61,6 @@ function restoreAppState() {
     activateTab('page1');
     appState.activeTab = 'page1'; // Set 'page1' as the active tab in appState
     saveAppState();
+    history.replaceState(appState, null); // Update the browser's history with 'page1' as the initial state
   }
 }
