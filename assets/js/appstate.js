@@ -3,6 +3,7 @@ var tabs = document.querySelectorAll('.tab-content');
 var appState = {
   activeTab: null
 };
+var tabHistory = []; // Array to store tab history
 
 for (var i = 0; i < navButtons.length; i++) {
   navButtons[i].addEventListener('click', function() {
@@ -10,6 +11,7 @@ for (var i = 0; i < navButtons.length; i++) {
     activateTab(tabId);
     appState.activeTab = tabId;
     saveAppState();
+    tabHistory.push(tabId); // Add the current tab to the history
     history.pushState(appState, null); // Update the browser's history
   });
 }
@@ -22,6 +24,14 @@ window.addEventListener('popstate', function(event) {
     }
   } else {
     activateTab('page1');
+  }
+
+  if (tabHistory.length > 0) {
+    tabHistory.pop(); // Remove the current tab from history
+    if (tabHistory.length > 0) {
+      var previousTab = tabHistory[tabHistory.length - 1];
+      activateTab(previousTab); // Activate the previous tab from history
+    }
   }
 });
 
@@ -54,8 +64,6 @@ function restoreAppState() {
     appState = JSON.parse(savedAppState);
     if (appState.activeTab) {
       activateTab(appState.activeTab);
-    } else {
-      activateTab('page1'); // Set 'page1' as default if no activeTab is found
     }
   } else {
     activateTab('page1');
