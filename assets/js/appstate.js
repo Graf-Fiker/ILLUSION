@@ -54,6 +54,8 @@ function restoreAppState() {
     appState = JSON.parse(savedAppState);
     if (appState.activeTab) {
       activateTab(appState.activeTab);
+    } else {
+      activateTab('page1'); // Set 'page1' as default if no activeTab is found
     }
   } else {
     activateTab('page1');
