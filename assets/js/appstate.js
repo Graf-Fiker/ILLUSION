@@ -5,16 +5,21 @@ var appState = {
 };
 var tabHistory = []; // Array to store tab history
 
-for (var i = 0; i < navButtons.length; i++) {
-  navButtons[i].addEventListener('click', function() {
-    var tabId = this.getAttribute('data-tab');
-    activateTab(tabId);
-    appState.activeTab = tabId;
-    saveAppState();
-    tabHistory.push(tabId); // Add the current tab to the history
-    history.pushState(appState, null); // Update the browser's history
-  });
-}
+document.addEventListener('DOMContentLoaded', function() {
+  restoreAppState();
+  history.replaceState(appState, null); // Set initial state in the browser's history
+
+  for (var i = 0; i < navButtons.length; i++) {
+    navButtons[i].addEventListener('click', function() {
+      var tabId = this.getAttribute('data-tab');
+      activateTab(tabId);
+      appState.activeTab = tabId;
+      saveAppState();
+      tabHistory.push(tabId); // Add the current tab to the history
+      history.pushState(appState, null); // Update the browser's history
+    });
+  }
+});
 
 window.addEventListener('popstate', function(event) {
   if (event.state) {
@@ -33,11 +38,6 @@ window.addEventListener('popstate', function(event) {
       activateTab(previousTab); // Activate the previous tab from history
     }
   }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  restoreAppState();
-  history.replaceState(appState, null); // Set initial state in the browser's history
 });
 
 function activateTab(tabId) {
