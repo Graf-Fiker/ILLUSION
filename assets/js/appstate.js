@@ -1,7 +1,8 @@
 var navButtons = document.querySelectorAll('.nav-btn');
 var tabs = document.querySelectorAll('.tab-content');
 var appState = {
-  activeTab: null
+  activeTab: null,
+  tabHistory: []
 };
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var tabId = this.getAttribute('data-tab');
       activateTab(tabId);
       appState.activeTab = tabId;
+      appState.tabHistory.push(tabId); // Add the current tab to the history
       saveAppState();
       history.pushState(appState, null); // Update the browser's history
     });
@@ -60,6 +62,7 @@ function restoreAppState() {
   } else {
     activateTab('page1');
     appState.activeTab = 'page1'; // Set 'page1' as the active tab in appState
+    appState.tabHistory.push('page1'); // Add 'page1' to the tab history
     saveAppState();
     history.replaceState(appState, null); // Update the browser's history with 'page1' as the initial state
   }
