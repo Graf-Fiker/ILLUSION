@@ -12,13 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
   for (var i = 0; i < navButtons.length; i++) {
     navButtons[i].addEventListener('click', function() {
       var tabId = this.getAttribute('data-tab');
-      var previousTab = appState.activeTab;
       activateTab(tabId);
       appState.activeTab = tabId;
       saveAppState();
-      if (previousTab !== tabId) {
-        tabHistory.push(previousTab); // Add the previous tab to the history
-      }
       history.pushState(appState, null); // Update the browser's history
     });
   }
@@ -34,15 +30,6 @@ window.addEventListener('popstate', function(event) {
     activateTab('page1');
     appState.activeTab = 'page1'; // Set 'page1' as the active tab in appState
     saveAppState();
-  }
-
-  if (tabHistory.length > 0) {
-    var previousTab = tabHistory.pop();
-    if (appState.activeTab !== previousTab) {
-      activateTab(previousTab); // Activate the previous tab from history
-      appState.activeTab = previousTab;
-      saveAppState();
-    }
   }
 });
 
@@ -69,11 +56,9 @@ function restoreAppState() {
     appState = JSON.parse(savedAppState);
     if (appState.activeTab) {
       activateTab(appState.activeTab);
-      tabHistory.push(appState.activeTab); // Add the active tab to the history
     }
   } else {
     activateTab('page1');
-    tabHistory.push('page1'); // Add 'page1' to the history
     appState.activeTab = 'page1'; // Set 'page1' as the active tab in appState
     saveAppState();
   }
