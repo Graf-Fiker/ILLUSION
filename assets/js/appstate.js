@@ -3,7 +3,6 @@ var tabs = document.querySelectorAll('.tab-content');
 var appState = {
   activeTab: null
 };
-var tabHistory = []; // Array to store tab history
 
 for (var i = 0; i < navButtons.length; i++) {
   navButtons[i].addEventListener('click', function() {
@@ -11,33 +10,34 @@ for (var i = 0; i < navButtons.length; i++) {
     activateTab(tabId);
     appState.activeTab = tabId;
     saveAppState();
-    tabHistory.push(tabId); // Add the current tab to the history
     history.pushState(appState, null); // Update the browser's history
   });
 }
 
 window.addEventListener('popstate', function(event) {
-  if (event.state) {
-    appState = event.state;
-    if (appState.activeTab) {
-      activateTab(appState.activeTab);
-    }
+  if (event.state && event.state.activeTab && document.querySelector('#' + event.state.activeTab)) {
+    appState.activeTab = event.state.activeTab;
+    activateTab(appState.activeTab);
   } else {
     activateTab('page1');
+    appState.activeTab = 'page1';
+    saveAppState();
+    history.replaceState(appState, null); // Update the browser's history with 'page1' as the initial state
   }
+});
 
-  if (tabHistory.length > 0) {
-    tabHistory.pop(); // Remove the current tab from history
-    if (tabHistory.length > 0) {
-      var previousTab = tabHistory[tabHistory.length - 1];
-      activateTab(previousTab); // Activate the previous tab from history
-    }
-  }
+window.addEventListener('beforeunload', function() {
+  clearAppState();
 });
 
 document.addEventListener('DOMContentLoaded', function() {
   restoreAppState();
-  history.replaceState(appState, null); // Set initial state in the browser's history
+  if (!appState.activeTab || !document.querySelector('#' + appState.activeTab)) {
+    activateTab('page1');
+    appState.activeTab = 'page1';
+    saveAppState();
+    history.replaceState(appState, null); // Update the browser's history with 'page1' as the initial state
+  }
 });
 
 function activateTab(tabId) {
@@ -51,7 +51,6 @@ function activateTab(tabId) {
   var tab = document.querySelector('#' + tabId);
   tabButton.classList.add('active');
   tab.classList.add('active');
-  appState.activeTab = Array.from(tabs).indexOf(tab);
 }
 
 function saveAppState() {
@@ -61,11 +60,24 @@ function saveAppState() {
 function restoreAppState() {
   var savedAppState = localStorage.getItem('appState');
   if (savedAppState) {
-    appState = JSON.parse(savedAppState);
-    if (appState.activeTab) {
-      activateTab(appState.activeTab);
+    try {
+      appState = JSON.parse(savedAppState);
+      if (appState.activeTab && document.querySelector('#' + appState.activeTab)) {
+        activateTab(appState.activeTab);
+        return;
+      }
+    } catch (error) {
+      console.error('Failed to parse stored app state:', error);
     }
-  } else {
-    activateTab('page1');
   }
+
+  // Default state when no valid saved app state is available
+  activateTab('page1');
+  appState.activeTab = 'page1';
+  saveAppState();
+  history.replaceState(appState, null); // Update the browser's history with 'page1' as the initial state
+}
+
+function clearAppState() {
+  localStorage.removeItem('appState');
 }
