@@ -1,33 +1,23 @@
 var navButtons = document.querySelectorAll('.nav-btn');
 var tabs = document.querySelectorAll('.tab-content');
-var appState = {
-  activeTab: null
-};
+
+var activeTab = 0;
+var storedTab = localStorage.getItem('activeTab');
+if (storedTab) {
+  activeTab = parseInt(storedTab);
+} else {
+  activateTab('page1'); // Default to page 1 if no stored tab
+}
 
 for (var i = 0; i < navButtons.length; i++) {
   navButtons[i].addEventListener('click', function() {
     var tabId = this.getAttribute('data-tab');
     activateTab(tabId);
-    appState.activeTab = tabId;
-    saveAppState();
-    history.pushState(appState, null); // Update the browser's history
   });
 }
 
-window.addEventListener('popstate', function(event) {
-  if (event.state) {
-    appState = event.state;
-    if (appState.activeTab) {
-      activateTab(appState.activeTab);
-    }
-  } else {
-    activateTab('page1');
-  }
-});
-
 document.addEventListener('DOMContentLoaded', function() {
-  restoreAppState();
-  history.replaceState(appState, null); // Set initial state in the browser's history
+  activateTab('page1');
 });
 
 function activateTab(tabId) {
@@ -41,21 +31,6 @@ function activateTab(tabId) {
   var tab = document.querySelector('#' + tabId);
   tabButton.classList.add('active');
   tab.classList.add('active');
-  appState.activeTab = Array.from(tabs).indexOf(tab);
-}
-
-function saveAppState() {
-  localStorage.setItem('appState', JSON.stringify(appState));
-}
-
-function restoreAppState() {
-  var savedAppState = localStorage.getItem('appState');
-  if (savedAppState) {
-    appState = JSON.parse(savedAppState);
-    if (appState.activeTab) {
-      activateTab(appState.activeTab);
-    }
-  } else {
-    activateTab('page1');
-  }
+  activeTab = Array.from(tabs).indexOf(tab);
+  localStorage.setItem('activeTab', activeTab);
 }
