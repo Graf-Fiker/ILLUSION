@@ -10,11 +10,24 @@ for (var i = 0; i < navButtons.length; i++) {
     activateTab(tabId);
     appState.activeTab = tabId;
     saveAppState();
+    history.pushState(appState, null); // Update the browser's history
   });
 }
 
+window.addEventListener('popstate', function(event) {
+  if (event.state) {
+    appState = event.state;
+    if (appState.activeTab) {
+      activateTab(appState.activeTab);
+    }
+  } else {
+    activateTab('page1');
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
   restoreAppState();
+  history.replaceState(appState, null); // Set initial state in the browser's history
 });
 
 function activateTab(tabId) {
