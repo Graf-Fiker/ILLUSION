@@ -20,17 +20,6 @@ function updateTimer() {
   // Display the timer
   var timerElement = document.getElementById("timer_daily");
   timerElement.textContent = "TIME REMAINING: " + hours + "h " + minutes + "m " + seconds + "s";
-
-  // Check if the timer has reached 0
-  if (timeDiff <= 0) {
-    timerElement.textContent = "Timer expired!";
-    clearInterval(timerInterval);
-    setTimeout(function() {
-      // Reset the timer after 1 second
-      updateTimer();
-      timerInterval = setInterval(updateTimer, 1000);
-    }, 1000);
-  }
 }
 
 // Update the timer immediately
