@@ -1,28 +1,43 @@
 var navButtons = document.querySelectorAll('.nav-btn');
 var tabs = document.querySelectorAll('.tab-content');
-
-var activeTab = 0;
-var storedTab = localStorage.getItem('activeTab');
-if (storedTab) {
-  activeTab = parseInt(storedTab);
-} else {
-  activateTab('page1'); // Default to page 1 if no stored tab
-}
+var appState = {
+  activeTab: null
+};
+var tabHistory = []; // Array to store tab history
 
 for (var i = 0; i < navButtons.length; i++) {
   navButtons[i].addEventListener('click', function() {
     var tabId = this.getAttribute('data-tab');
     activateTab(tabId);
+    appState.activeTab = tabId;
+    saveAppState();
+    tabHistory.push(tabId); // Add the current tab to the history
+    history.pushState(appState, null); // Update the browser's history
   });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  activateTab('page1');
+window.addEventListener('popstate', function(event) {
+  if (event.state) {
+    appState = event.state;
+    if (appState.activeTab) {
+      activateTab(appState.activeTab);
+    }
+  } else {
+    activateTab('page1');
+  }
+
+  if (tabHistory.length > 0) {
+    tabHistory.pop(); // Remove the current tab from history
+    if (tabHistory.length > 0) {
+      var previousTab = tabHistory[tabHistory.length - 1];
+      activateTab(previousTab); // Activate the previous tab from history
+    }
+  }
 });
 
-window.addEventListener('popstate', function(event) {
-  var tabId = event.state ? event.state.tabId : 'page1';
-  activateTab(tabId);
+document.addEventListener('DOMContentLoaded', function() {
+  restoreAppState();
+  history.replaceState(appState, null); // Set initial state in the browser's history
 });
 
 function activateTab(tabId) {
@@ -36,13 +51,21 @@ function activateTab(tabId) {
   var tab = document.querySelector('#' + tabId);
   tabButton.classList.add('active');
   tab.classList.add('active');
-  activeTab = Array.from(tabs).indexOf(tab);
-  localStorage.setItem('activeTab', activeTab);
-  if (tabId !== 'page1') {
-    history.pushState({ tabId: tabId }, null, null);
-  }
+  appState.activeTab = Array.from(tabs).indexOf(tab);
 }
 
-window.addEventListener('beforeunload', function(event) {
-  localStorage.removeItem('activeTab');
-});
+function saveAppState() {
+  localStorage.setItem('appState', JSON.stringify(appState));
+}
+
+function restoreAppState() {
+  var savedAppState = localStorage.getItem('appState');
+  if (savedAppState) {
+    appState = JSON.parse(savedAppState);
+    if (appState.activeTab) {
+      activateTab(appState.activeTab);
+    }
+  } else {
+    activateTab('page1');
+  }
+}
