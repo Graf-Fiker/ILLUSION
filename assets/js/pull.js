@@ -5,7 +5,6 @@ for (var i = 0; i < navButtons.length; i++) {
   navButtons[i].addEventListener('click', function() {
     var tabId = this.getAttribute('data-tab');
     activateTab(tabId);
-    // Store active page in localStorage
     localStorage.setItem('activePage', tabId);
   });
 }
@@ -14,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var storedPage = localStorage.getItem('activePage');
   var initialPage = storedPage || 'page1';
   activateTab(initialPage);
+  // Show the content of Page 1 after the page has finished loading
+  document.getElementById('page1').classList.remove('hide');
 });
 
 function activateTab(tabId) {
@@ -30,7 +31,6 @@ function activateTab(tabId) {
   activeTab = Array.from(tabs).indexOf(tab);
 }
 
-// Store active page in localStorage before the page is unloaded
 window.addEventListener('beforeunload', function() {
   var activeTab = document.querySelector('.nav-btn.active');
   var tabId = activeTab.getAttribute('data-tab');
