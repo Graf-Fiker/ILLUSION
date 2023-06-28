@@ -7,3 +7,10 @@ if ('serviceWorker' in navigator) {
       console.error('Service Worker registration failed:', error);
     });
 }
+// Listen for messages from the service worker
+navigator.serviceWorker.addEventListener('message', function(event) {
+  if (event.data && event.data.timer) {
+    var timerElement = document.getElementById('timer');
+    timerElement.textContent = "Time remaining: " + event.data.timer;
+  }
+});
