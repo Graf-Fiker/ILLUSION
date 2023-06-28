@@ -15,6 +15,9 @@ for (let i = 0; i < navButtons.length; i++) {
   });
 }
 
-// ...
-
-// Rest of the code remains the same
+// Store active page in local storage before the page is unloaded
+window.addEventListener('beforeunload', function() {
+  const activeTab = document.querySelector('.nav-btn.active');
+  const tabId = activeTab.getAttribute('data-tab');
+  localStorage.setItem('activePage', tabId);
+});
