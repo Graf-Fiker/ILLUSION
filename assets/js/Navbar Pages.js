@@ -5,15 +5,11 @@ for (var i = 0; i < navButtons.length; i++) {
   navButtons[i].addEventListener('click', function() {
     var tabId = this.getAttribute('data-tab');
     activateTab(tabId);
-    // Store active page in session storage
-    sessionStorage.setItem('activePage', tabId);
   });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  var storedPage = sessionStorage.getItem('activePage');
-  var initialPage = storedPage || 'page1';
-  activateTab(initialPage);
+  activateTab('page1');
 });
 
 function activateTab(tabId) {
@@ -29,10 +25,3 @@ function activateTab(tabId) {
   tab.classList.add('active');
   activeTab = Array.from(tabs).indexOf(tab);
 }
-
-// Store active page in session storage before the page is unloaded
-window.addEventListener('beforeunload', function() {
-  var activeTab = document.querySelector('.nav-btn.active');
-  var tabId = activeTab.getAttribute('data-tab');
-  sessionStorage.setItem('activePage', tabId);
-});
