@@ -3,9 +3,9 @@ function updateTimer() {
   var now = new Date(); // Current date and time
   var target = new Date(); // Target date and time
 
-  // Set the target day and time to Wednesday at 4:00 AM
-  target.setHours(4, 0, 0);
-  target.setDate(target.getDate() + ((3 - target.getDay() + 7) % 7));
+  // Set the target day and time to Wednesday at 4:00 AM GMT+1
+  target.setUTCHours(3, 0, 0); // Set the target time to 3:00 AM GMT
+  target.setDate(target.getDate() + ((3 - target.getUTCDay() + 7) % 7)); // Calculate the next Wednesday
 
   var timeDiff = target - now; // Calculate the time difference in milliseconds
 
