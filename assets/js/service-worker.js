@@ -142,3 +142,24 @@ self.addEventListener('notificationclick', function(event) {
   
   // Add custom logic here, e.g., open a specific URL or focus on the PWA window
 });
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open('my-pwa-cache').then(function(cache) {
+      return cache.addAll([
+        '/',
+        '/index.html',
+        '/styles.css',
+        '/script.js',
+        // Add other assets you want to cache here
+      ]);
+    })
+  );
+});
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
+  );
+});
