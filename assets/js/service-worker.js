@@ -15,16 +15,19 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
+const CACHE_NAME = 'my-cache';
+const urlsToCache = [
+  '/',
+  '/index.html',
+  '/styles.css',
+  '/script.js',
+  // Add other static assets you want to cache
+];
+
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('my-pwa-cache').then(function(cache) {
-      return cache.addAll([
-        '/',
-        '/index.html',
-        '/styles.css',
-        '/script.js',
-        // Add other assets you want to cache here
-      ]);
+    caches.open(CACHE_NAME).then(function(cache) {
+      return cache.addAll(urlsToCache);
     })
   );
 });
