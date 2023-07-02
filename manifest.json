@@ -1,1 +1,65 @@
-{"short_name":"Illusion App","name":"ILLUSION","icons":[{"src":"/assets/img/illu%20next%20gen.svg","type":"image/svg+xml","sizes":"150x150","purpose":"any maskable"},{"src":"/assets/img/illu%20next%20gen.svg","type":"image/svg+xml","sizes":"150x150","purpose":"any maskable"}],"start_url":"index.html","background_color":"#343a40","theme_color":"#343a40","display":"standalone","orientation":"portrait"}
+{
+  "short_name": "Illusion App",
+  "name": "ILLUSION",
+  "icons": [
+    {
+      "src": "/assets/img/illu%20next%20gen.svg",
+      "type": "image/svg+xml",
+      "sizes": "150x150",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/img/illu%20next%20gen.svg",
+      "type": "image/svg+xml",
+      "sizes": "150x150",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#343a40",
+  "theme_color": "#343a40",
+  "display": "standalone",
+  "orientation": "portrait"
+"scope": "/",
+  "shortcuts": [
+    {
+      "name": "Page 1",
+      "short_name": "Page 1",
+      "description": "Shortcut for Page 1",
+      "url": "/page1",
+      "icons": [
+        {
+          "src": "page1-icon.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Page 2",
+      "short_name": "Page 2",
+      "description": "Shortcut for Page 2",
+      "url": "/page2",
+      "icons": [
+        {
+          "src": "page2-icon.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Page 3",
+      "short_name": "Page 3",
+      "description": "Shortcut for Page 3",
+      "url": "/page3",
+      "icons": [
+        {
+          "src": "page3-icon.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}
