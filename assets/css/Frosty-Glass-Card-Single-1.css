@@ -1,6 +1,6 @@
 @media (min-width: 1400px) {
   #page1 {
-    width: 600px;
+    width: 32%;
     height: 849px;
     padding-bottom: 3px;
     margin-left: 20px;
@@ -10,9 +10,9 @@
 @media (min-width: 1400px) {
   #page2 {
     display: block;
-    width: 600px;
+    width: 32%;
     left: 0;
-    margin-left: 649px;
+    margin-left: 34%;
     overflow-y: scroll;
   }
 }

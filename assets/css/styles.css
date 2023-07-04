@@ -65,9 +65,9 @@ header {
 
 @media (min-width: 1400px) {
   #page3 {
-    width: 600px;
+    width: 32%;
     display: block;
-    margin-left: 1267px;
+    margin-left: 66%;
   }
 }
 
