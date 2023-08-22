@@ -6,5 +6,5 @@ This is the Digital Maintenance Checklist for the NGS Illusion Alliance!
 Works even on Mobile! the Website is fully Responsive!
 <p>Website: https://graf-fiker.github.io/ILLUSION/<p/>
 
-![image](h[ttps://user-images.githubusercontent.com/127075813/229354322-f28ab3a8-09fa-43f4-a871-2e577034f4ec.png](https://media.discordapp.net/attachments/911234401843687430/1142785927085817946/ILLUSION_APP_AD.png?width=658&height=494)https://media.discordapp.net/attachments/911234401843687430/1142785927085817946/ILLUSION_APP_AD.png?width=658&height=494)
+![image](https://cdn.discordapp.com/attachments/911234401843687430/1142785927085817946/ILLUSION_APP_AD.png)
 
