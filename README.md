@@ -6,3 +6,9 @@ Introducing the Illusion App for PSO2 NGS – your ultimate hub for the latest n
 
 ![image](https://cdn.discordapp.com/attachments/911234401843687430/1142785927085817946/ILLUSION_APP_AD.png)
 
+![image](https://media.discordapp.net/attachments/1133766015847776377/1145393486170960003/dsrfdfgf.png?width=675&height=507)
+
+![image](https://media.discordapp.net/attachments/1133766015847776377/1145393485550202990/dsfvssfdfs.png?width=675&height=507)
+
+![image](https://media.discordapp.net/attachments/1133766015847776377/1145393485847986316/vdfsvfdsf.png?width=675&height=507)
+
