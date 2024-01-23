@@ -552,7 +552,7 @@
 
     // Listen for messages from the service worker
     navigator.serviceWorker.addEventListener('message', function(event) {
-      if (event.data && event.data.cachingEnabled !== undefined) {
+      if (event.data && event.data.command === 'updateButton' && event.data.cachingEnabled !== undefined) {
         // Update button text based on the caching state
         const button = document.getElementById('toggleCaching');
         button.textContent = event.data.cachingEnabled ? 'Disable Caching' : 'Enable Caching';
