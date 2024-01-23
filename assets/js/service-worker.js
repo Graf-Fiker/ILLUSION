@@ -17,12 +17,13 @@ if ('serviceWorker' in navigator) {
 }
 
 const CACHE_NAME = 'my-cache-v1';
+const OFFLINE_PAGE_URL = '/offline.html';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function(cache) {
       // Cache the entire website by using a wildcard route
-      return cache.addAll(['/*']);
+      return cache.addAll(['/', OFFLINE_PAGE_URL]);
     })
   );
 });
@@ -30,7 +31,10 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(response) {
-      return response || fetch(event.request);
+      return response || fetch(event.request).catch(function() {
+        // If the fetch fails, serve the custom offline page
+        return caches.match(OFFLINE_PAGE_URL);
+      });
     })
   );
 });
