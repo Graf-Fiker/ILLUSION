@@ -27,8 +27,33 @@
 <script src="path/to/version-check.js"></script>
 </head>
 
-<body> <h1>Offline</h1>
-  <p>You are currently offline. Please check your internet connection and try again.</p>
+<body><!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your PWA</title>
+</head>
+<body>
+  <h1>Your PWA</h1>
+  <p>Content of your PWA goes here.</p>
+
+  <!-- Button to disable caching -->
+  <button id="disableCaching">Disable Caching</button>
+
+  <script>
+    document.getElementById('disableCaching').addEventListener('click', function() {
+      // Send a message to the service worker to disable caching
+      if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+        navigator.serviceWorker.controller.postMessage({ command: 'disableCaching' });
+      }
+    });
+  </script>
+</body>
+</html>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>

@@ -507,7 +507,7 @@
                     <h4 class="d-flex justify-content-center align-items-center justify-content-xxl-center modal-title" style="color: #b478d9;font-family: Roboto, sans-serif;width: 195.328px;font-weight: bold;">SETTINGS</h4>
                 </div>
                 <div class="modal-body d-flex justify-content-center" style="background: var(--bs-secondary-bg);height: 700px;max-height: 100%;">
-                    <div class="container d-flex justify-content-center">
+                    <div class="container">
                         <div class="row d-flex justify-content-center align-items-center" style="border-radius: 5px;height: 180px;width: 428px;margin-right: 0px;margin-left: 0px;border: 1px none #b478d9;">
                             <div class="col-3 col-md-4 col-xxl-4 d-grid justify-content-center align-items-center" style="width: 108px;height: 108px;">
                                 <div class="theme-switcher dropdown" style="position: relative;"><button class="btn btn-link" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="color: var(--bs-body-color);height: 80px;width: 80px;background: var(--bs-secondary-bg);box-shadow: 1px 3px 4px rgba(33,33,34,0.51);border-style: none;border-color: #b478d9;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1" style="font-size: 44px;color: #b478d9;">
@@ -524,6 +524,44 @@
                                 </div>
                                 <p style="text-align: center;font-family: Roboto, sans-serif;margin-top: 10px;">Dark/ Light Mode</p>
                             </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body"><!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your PWA</title>
+</head>
+<body>
+  <h1>Your PWA</h1>
+  <p>Content of your PWA goes here.</p>
+
+  <!-- Button to toggle caching -->
+  <button id="toggleCaching">Disable Caching</button>
+
+  <script>
+    document.getElementById('toggleCaching').addEventListener('click', function() {
+      // Send a message to the service worker to toggle caching
+      if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+        navigator.serviceWorker.controller.postMessage({ command: 'toggleCaching' });
+      }
+    });
+
+    // Listen for messages from the service worker
+    navigator.serviceWorker.addEventListener('message', function(event) {
+      if (event.data && event.data.cachingEnabled !== undefined) {
+        // Update button text based on the caching state
+        const button = document.getElementById('toggleCaching');
+        button.textContent = event.data.cachingEnabled ? 'Disable Caching' : 'Enable Caching';
+      }
+    });
+  </script>
+</body>
+</html>
+</div>
                         </div>
                     </div>
                 </div>
