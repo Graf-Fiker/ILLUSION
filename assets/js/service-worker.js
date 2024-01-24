@@ -56,15 +56,8 @@ const OFFLINE_PAGE_URL = '/offline.html';
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function(cache) {
-      // Cache all resources, including pages, styles, scripts, and other assets
-      return cache.addAll([
-        '/',
-        OFFLINE_PAGE_URL,
-        // Add other paths to be cached here
-        '/styles/main.css',
-        '/scripts/main.js',
-        // Add more resources as needed
-      ]);
+      // Cache the offline page
+      return cache.addAll([OFFLINE_PAGE_URL]);
     })
   );
 });
