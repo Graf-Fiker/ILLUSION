@@ -56,8 +56,8 @@ self.addEventListener('message', function(event) {
     isCachingEnabled = !isCachingEnabled;
     console.log('Caching is ' + (isCachingEnabled ? 'enabled' : 'disabled'));
 
-    // Send the current caching state back to the main page
-    self.clients.matchAll().then(function(clients) {
+    // Send the current caching state back to all clients
+    self.clients.matchAll({ includeUncontrolled: true }).then(function(clients) {
       clients.forEach(function(client) {
         client.postMessage({ command: 'updateButton', cachingEnabled: isCachingEnabled });
       });
@@ -67,6 +67,7 @@ self.addEventListener('message', function(event) {
     self.clients.claim();
   }
 });
+
 self.addEventListener('activate', function(event) {
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
