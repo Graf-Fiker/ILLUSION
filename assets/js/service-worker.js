@@ -57,8 +57,12 @@ self.addEventListener('message', function(event) {
     // Broadcast the updated state immediately
     self.clients.claim();
 
-    // Dispatch a custom event to notify the main page
-    self.dispatchEvent(new Event('controllerchange'));
+    // Send the current caching state back to the main page
+    self.clients.matchAll({ includeUncontrolled: true }).then(function(clients) {
+      clients.forEach(function(client) {
+        client.postMessage({ command: 'updateButton', cachingEnabled: isCachingEnabled });
+      });
+    });
   }
 });
 
