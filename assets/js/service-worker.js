@@ -50,17 +50,40 @@ self.addEventListener('fetch', function(event) {
 
 // service-worker.js
 
-self.addEventListener('message', function(event) {
-  if (event.data && event.data.command === 'toggleCaching') {
-    // Handle the toggle caching command
-    isCachingEnabled = !isCachingEnabled;
-    console.log('Caching is ' + (isCachingEnabled ? 'enabled' : 'disabled'));
+const CACHE_NAME = 'my-cache-v1';
+const OFFLINE_PAGE_URL = '/offline.html';
 
-    // Send the current caching state back to the main page
-    self.clients.matchAll().then(function(clients) {
-      clients.forEach(function(client) {
-        client.postMessage({ command: 'updateButton', cachingEnabled: isCachingEnabled });
-      });
-    });
-  }
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then(function(cache) {
+      // Cache all resources, including pages, styles, scripts, and other assets
+      return cache.addAll([
+        '/',
+        OFFLINE_PAGE_URL,
+        // Add other paths to be cached here
+        '/styles/main.css',
+        '/scripts/main.js',
+        // Add more resources as needed
+      ]);
+    })
+  );
 });
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      // Serve cached resources or fetch from the network and cache
+      return response || fetch(event.request).then(function(response) {
+        return caches.open(CACHE_NAME).then(function(cache) {
+          cache.put(event.request, response.clone());
+          return response;
+        });
+      });
+    }).catch(function() {
+      // Serve the offline page for failed requests
+      return caches.match(OFFLINE_PAGE_URL);
+    })
+  );
+});
+
+// Other event listeners and logic...
