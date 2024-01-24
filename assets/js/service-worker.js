@@ -73,10 +73,10 @@ self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(response) {
       // Serve cached resources or fetch from the network and cache
-      return response || fetch(event.request).then(function(response) {
+      return response || fetch(event.request).then(function(fetchResponse) {
         return caches.open(CACHE_NAME).then(function(cache) {
-          cache.put(event.request, response.clone());
-          return response;
+          cache.put(event.request, fetchResponse.clone());
+          return fetchResponse;
         });
       });
     }).catch(function() {
@@ -85,5 +85,3 @@ self.addEventListener('fetch', function(event) {
     })
   );
 });
-
-// Other event listeners and logic...
