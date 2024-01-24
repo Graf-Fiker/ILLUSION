@@ -536,8 +536,7 @@
   <title>Your PWA</title>
 </head>
 <body>
-  <h1>Your dd
-     PWA</h1>
+  <h1>Your PWA</h1>
   <p>Content of your PWA goes here.</p>
 
   <!-- Button to toggle caching -->
@@ -551,13 +550,10 @@
       }
     });
 
-    // Listen for messages from the service worker
-    navigator.serviceWorker.addEventListener('message', function(event) {
-      if (event.data && event.data.command === 'updateButton' && event.data.cachingEnabled !== undefined) {
-        // Update button text based on the caching state
-        const button = document.getElementById('toggleCaching');
-        button.textContent = event.data.cachingEnabled ? 'Disable Caching' : 'Enable Caching';
-      }
+    // Listen for custom event to update button text
+    navigator.serviceWorker.addEventListener('controllerchange', function() {
+      const button = document.getElementById('toggleCaching');
+      button.textContent = navigator.serviceWorker.controller ? 'Disable Caching' : 'Enable Caching';
     });
   </script>
 </body>

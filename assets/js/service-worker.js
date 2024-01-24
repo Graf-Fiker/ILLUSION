@@ -48,23 +48,17 @@ self.addEventListener('fetch', function(event) {
   );
 });
 
-// service-worker.js
-
 self.addEventListener('message', function(event) {
   if (event.data && event.data.command === 'toggleCaching') {
     // Handle the toggle caching command
     isCachingEnabled = !isCachingEnabled;
     console.log('Caching is ' + (isCachingEnabled ? 'enabled' : 'disabled'));
 
-    // Send the current caching state back to all clients
-    self.clients.matchAll({ includeUncontrolled: true }).then(function(clients) {
-      clients.forEach(function(client) {
-        client.postMessage({ command: 'updateButton', cachingEnabled: isCachingEnabled });
-      });
-    });
-
     // Broadcast the updated state immediately
     self.clients.claim();
+
+    // Dispatch a custom event to notify the main page
+    self.dispatchEvent(new Event('controllerchange'));
   }
 });
 
