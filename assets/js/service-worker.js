@@ -48,34 +48,19 @@ self.addEventListener('fetch', function(event) {
   );
 });
 
+// service-worker.js
+
 self.addEventListener('message', function(event) {
   if (event.data && event.data.command === 'toggleCaching') {
     // Handle the toggle caching command
     isCachingEnabled = !isCachingEnabled;
     console.log('Caching is ' + (isCachingEnabled ? 'enabled' : 'disabled'));
 
-    // Broadcast the updated state immediately
-    self.clients.claim();
-
     // Send the current caching state back to the main page
-    self.clients.matchAll({ includeUncontrolled: true }).then(function(clients) {
+    self.clients.matchAll().then(function(clients) {
       clients.forEach(function(client) {
         client.postMessage({ command: 'updateButton', cachingEnabled: isCachingEnabled });
       });
     });
   }
-});
-
-self.addEventListener('activate', function(event) {
-  event.waitUntil(
-    caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.map(function(cacheName) {
-          if (cacheName !== CACHE_NAME) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
 });

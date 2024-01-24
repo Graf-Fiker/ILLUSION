@@ -1,20 +1,28 @@
-// Assuming you have a function to toggle between light and dark mode
-function toggleLightMode() {
-  document.body.classList.toggle('light-mode');
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const darkModeBtn = document.getElementById('dark-mode-btn');
+        const lightModeBtn = document.getElementById('light-mode-btn');
 
-  // Call a function to update the image filter based on the mode
-  updateImageFilter();
-}
+        // Check the initial mode (e.g., stored in localStorage)
+        const currentMode = localStorage.getItem('mode');
+        if (currentMode === 'dark') {
+            enableDarkMode();
+        } else {
+            enableLightMode();
+        }
 
-// Function to update the image filter based on the theme mode
-function updateImageFilter() {
-  const image = document.getElementById('illusion-eye'); // Replace 'yourImageId' with the actual ID of your image component
+        // Event listeners for buttons
+        darkModeBtn.addEventListener('click', enableDarkMode);
+        lightModeBtn.addEventListener('click', enableLightMode);
 
-  if (document.body.classList.contains('light-mode')) {
-    // Light mode, remove invert filter
-    image.style.filter = 'invert(0%)';
-  } else {
-    // Dark mode, apply invert filter
-    image.style.filter = 'invert(100%)';
-  }
-}
+        function enableDarkMode() {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('mode', 'dark');
+        }
+
+        function enableLightMode() {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('mode', 'light');
+        }
+    });
+</script>
