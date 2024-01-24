@@ -48,6 +48,8 @@ self.addEventListener('fetch', function(event) {
   );
 });
 
+// service-worker.js
+
 self.addEventListener('message', function(event) {
   if (event.data && event.data.command === 'toggleCaching') {
     // Handle the toggle caching command
@@ -60,9 +62,11 @@ self.addEventListener('message', function(event) {
         client.postMessage({ command: 'updateButton', cachingEnabled: isCachingEnabled });
       });
     });
+
+    // Broadcast the updated state immediately
+    self.clients.claim();
   }
 });
-
 self.addEventListener('activate', function(event) {
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
