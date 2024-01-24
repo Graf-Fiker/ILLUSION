@@ -5,7 +5,17 @@
     <meta charset="utf-8">
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Offline</title>
+  <title>Offline</title><script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(function(registration) {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(function(error) {
+          console.log('Service Worker registration failed:', error);
+        });
+    }
+  </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>illu next gen DARK MODE</title>
     <meta name="theme-color" content="#343a40">
