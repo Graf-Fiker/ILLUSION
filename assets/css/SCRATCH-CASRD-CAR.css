@@ -1,0 +1,54 @@
+button:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+@media (prefers-color-scheme: light) {
+  img {
+    padding-right: 10px;
+    width: 40.7812px;
+    filter: invert 100%;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  img {
+    padding-right: 10px;
+    width: 40.7812px;
+  }
+}
+
+img {
+  padding-right: 10px;
+  width: 40.7812px;
+}
+
+@media (prefers-color-scheme: light) {
+  img {
+    padding-right: 10px;
+    width: 40.7812px;
+    filter: invert(100%);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  img {
+    filter: invert(0%);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  img {
+    /*filter: invert(100%);*/
+  }
+}
+
+.row {
+}
+
+.col {
+}
+
+div {
+}
+
