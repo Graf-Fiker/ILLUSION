@@ -123,6 +123,24 @@
 </head>
 
 <body class="d-flex d-xxl-flex align-items-start justify-content-xxl-center align-items-xxl-start" style="background: var(--bs-secondary-bg);height: 530px;z-index: 1;/*overflow-y: hidden;*//*overflow-x: hidden;*/">
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvas-1" style="border-top-left-radius: 13px;border-top-right-radius: 13px;height: 500px;">
+        <div class="offcanvas-header d-flex justify-content-center"><button class="btn-close btn-close-white" type="button" aria-label="Close" data-bs-dismiss="offcanvas"></button></div>
+        <div class="offcanvas-body" style="padding-right: 20px;padding-left: 20px;padding-bottom: 0px;">
+            <div class="col" style="padding-bottom: 16px;">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">ALLIANCE NEWS:</h4>
+                        <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
+                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><a class="card-link" href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center" style="width: 100%;"><button class="btn btn-primary" type="button" data-bs-dismiss="offcanvas" style="width: 100%;background: #b478d9;color: var(--bs-secondary-bg);border-style: none;border-bottom-left-radius: 0;border-bottom-right-radius: 0;font-family: Roboto, sans-serif;font-weight: bold;" data-bs-target="#modal-5" data-bs-toggle="modal">Chat Keyword</button></div>
+            <div class="col d-flex justify-content-center align-items-center" style="width: 100%;"><button class="btn btn-primary" type="button" data-bs-dismiss="offcanvas" style="width: 100%;background: #b478d9;color: var(--bs-secondary-bg);border-bottom-left-radius: 0;border-bottom-right-radius: 0;border-top-right-radius: 0;border-top-left-radius: 0;border-style: none;border-top: 2px solid var(--bs-body-bg);border-bottom: 2px solid var(--bs-body-bg);font-family: Roboto, sans-serif;font-weight: bold;" data-bs-target="#modal-6" data-bs-toggle="modal">NGS Roadmap</button></div>
+            <div class="col d-flex justify-content-center align-items-center" style="width: 100%;"><button class="btn btn-primary" type="button" data-bs-dismiss="offcanvas" style="width: 100%;background: #b478d9;color: var(--bs-secondary-bg);border-bottom-left-radius: 0;border-bottom-right-radius: 0;border-top-right-radius: 0;border-top-left-radius: 0;font-family: Roboto, sans-serif;font-weight: bold;border-style: none;border-top: 2px none var(--bs-body-bg);border-bottom: 2px solid var(--bs-body-bg);" data-bs-target="#modal-2" data-bs-toggle="modal">App Settings</button></div>
+            <div class="col d-flex justify-content-center align-items-center" style="width: 100%;font-weight: bold;"><button class="btn btn-primary" type="button" data-bs-dismiss="offcanvas" style="width: 100%;background: #b478d9;color: var(--bs-secondary-bg);border-style: none;border-bottom-left-radius: 6;border-bottom-right-radius: 6;border-top-right-radius: 0;border-top-left-radius: 0;font-family: Roboto, sans-serif;font-weight: bold;" data-bs-target="#modal-1" data-bs-toggle="modal">Credits</button></div>
+        </div>
+    </div>
     <div></div>
     <div class="modal fade" role="dialog" tabindex="-1" id="changelogModal" aria-labelledby="changelogModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down" role="document">
@@ -132,6 +150,11 @@
                 </div>
                 <div class="col d-flex justify-content-center" style="background: url(&quot;assets/img/555458_wide%20angle%20picture,%20cunstruction%20side__%20no%20person_xl-1024-v1-0.jpg&quot;) bottom / auto, var(--bs-secondary-color);filter: blur(0px);backdrop-filter: blur(0px);"><img src="assets/img/fdfdfdf.svg" style="width: 240.7656px;"></div>
                 <div class="modal-body" style="height: 500px;background: var(--bs-secondary-bg);border-top-style: none;overflow-y: scroll;">
+                    <p style="font-family: Roboto, sans-serif;"><strong>Version 1.0.8</strong></p>
+                    <ul style="font-family: Roboto, sans-serif;">
+                        <li>Added the June content</li>
+                        <li>New Menu slider added.</li>
+                    </ul>
                     <p style="font-family: Roboto, sans-serif;"><strong>Version 1.0.7</strong></p>
                     <ul style="font-family: Roboto, sans-serif;">
                         <li>Added the March content</li>
@@ -735,39 +758,20 @@
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-md bg-body d-flex d-xxl-flex justify-content-center align-items-center justify-content-xxl-center align-items-xxl-center" style="background: linear-gradient(var(--bs-secondary-bg), var(--bs-secondary-bg) 19%), rgb(1,128,255);height: 58px;top: 0;position: static;display: block;">
-        <div class="container-fluid">
-            <div class="dropdown" style="margin-right: 11px;margin-top: 12px;"><a aria-expanded="false" data-bs-toggle="dropdown" href="#"><i class="material-icons" style="color: var(--bs-emphasis-color);margin-top: -35px;padding-top: 8px;padding-bottom: 8px;margin-right: 13px;">menu</i></a>
-                <div class="dropdown-menu" style="margin-right: 0px;margin-left: -129px;background: var(--bs-secondary-bg);"><a class="dropdown-item d-flex justify-content-center align-items-center" href="#" style="color: #b478d9;" data-bs-target="#modal-5" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" style="padding-right: 5px;width: 25px;height: 25px;color: #b478d9;">
-                            <g>
-                                <rect fill="none" height="24" width="24"></rect>
-                            </g>
-                            <g>
-                                <g>
-                                    <g>
-                                        <path d="M12.79,21L3,11.21v2c0,0.53,0.21,1.04,0.59,1.41l7.79,7.79c0.78,0.78,2.05,0.78,2.83,0l6.21-6.21 c0.78-0.78,0.78-2.05,0-2.83L12.79,21z"></path>
-                                    </g>
-                                    <g>
-                                        <path d="M11.38,17.41c0.78,0.78,2.05,0.78,2.83,0l6.21-6.21c0.78-0.78,0.78-2.05,0-2.83l-7.79-7.79C12.25,0.21,11.74,0,11.21,0H5 C3.9,0,3,0.9,3,2v6.21c0,0.53,0.21,1.04,0.59,1.41L11.38,17.41z M7.25,3C7.94,3,8.5,3.56,8.5,4.25S7.94,5.5,7.25,5.5 S6,4.94,6,4.25S6.56,3,7.25,3z"></path>
-                                    </g>
-                                </g>
-                            </g>
-                        </svg>Chat Keyword</a><a class="dropdown-item d-flex d-xxl-flex justify-content-start align-items-center justify-content-xxl-start align-items-xxl-center" style="color: #b478d9;font-family: Roboto, sans-serif;" data-bs-target="#modal-6" data-bs-toggle="modal"><i class="material-icons" style="padding-right: 5px;">map</i>Roadmap</a><a class="dropdown-item d-flex d-xxl-flex justify-content-start align-items-center justify-content-xxl-start align-items-xxl-center" href="#" style="color: #b478d9;font-family: Roboto, sans-serif;" data-bs-target="#modal-2" data-bs-toggle="modal"><i class="material-icons" style="padding-right: 5px;">settings</i>Settings</a><a class="dropdown-item d-flex d-xxl-flex justify-content-start align-items-center justify-content-xxl-start" href="#" style="color: #b478d9;font-family: Roboto, sans-serif;" data-bs-target="#changelogModal" data-bs-toggle="modal"><i class="material-icons" style="padding-right: 5px;">update</i>Changelog</a><a class="dropdown-item d-flex d-xxl-flex justify-content-start align-items-center justify-content-xxl-start" href="#" style="color: #b478d9;font-family: Roboto, sans-serif;" data-bs-target="#modal-1" data-bs-toggle="modal"><i class="material-icons" style="padding-right: 5px;">favorite</i>Credits</a></div>
-            </div>
-            <p class="d-flex justify-content-start align-items-center" style="color: var(--bs-emphasis-color);margin-top: 13px;margin-left: 15px;position: fixed;font-family: Roboto, sans-serif;font-weight: bold;"><img id="illusion-eye" src="assets/img/illuuuuu.svg" width="41" height="31">ILLUSION</p>
-        </div>
-    </nav>
     <div class="d-flex justify-content-center navbar" style="background: var(--bs-secondary-bg);height: 67px;padding-top: 7px;z-index: 6;border-top: 2px solid #b478d9;">
         <div class="col d-flex justify-content-center align-items-end" style="/*padding-top: -0px;*/margin-top: -2px;"><button class="active nav-btn" data-bss-hover-animate="pulse" data-tab="page1"><i class="fas fa-ticket-alt" style="border-color: rgb(255,255,255);"></i><p>Scratch</p></button></div>
         <div class="col d-flex justify-content-center"><button data-bss-hover-animate="pulse" class="nav-btn" data-tab="page2"><i class="fas fa-tasks" style="border-color: rgb(255,255,255);"></i><p>Task</p></button></div>
         <div class="col d-flex justify-content-center"><button data-bss-hover-animate="pulse" class="nav-btn" data-tab="page3"><i class="far fa-newspaper" style="border-color: rgb(255,255,255);"></i><p>News</p></button></div>
+        <div class="card" style="z-index: 99;width: 100%;height: 55px;position: fixed;top: 0;color: var(--bs-emphasis-color);background: var(--bs-secondary-bg);border-top-left-radius: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;">
+            <div class="card-body d-flex justify-content-end" style="position: none;/*background: var(--bs-secondary-bg);*/padding-top: 21px;color: var(--bs-emphasis-color);height: 53px;"><button class="btn btn-primary d-flex justify-content-center" type="button" style="width: 38px;background: #b478d9;padding-right: 7px;border-color: rgb(0,0,0);margin-top: -15px;height: 38px;" data-bs-target="#offcanvas-1" data-bs-toggle="offcanvas"><img class="d-flex align-items-end" src="assets/img/eyeeeee.png" style="height: 30px;width: 41.7656px;margin-left: 4px;margin-top: -3px;"></button></div>
+        </div>
     </div>
     <div class="tabs-container">
         <div id="page1" class="tab-content active" style="margin-top: 59px;background: var(--bs-secondary-bg);overflow-y: scroll;height: 90%;border-style: none;" data-tab="page1">
             <div class="col d-flex d-xxl-flex justify-content-center align-items-center mx-auto justify-content-xxl-center align-items-xxl-center" style="margin-bottom: 20px;width: 100%;padding-left: 20px;padding-right: 20px;margin-top: 10px;">
                 <div style="width: 90%;height: 3px;background: radial-gradient(#b478d9, var(--bs-secondary-bg)), #b478d9;position: absolute;z-index: 1;border-radius: 58px;"></div>
                 <div class="d-flex justify-content-center align-items-center" style="width: 25%;height: 25px;background: #b478d9;border-radius: 64px;z-index: 2;">
-                    <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: var(--bs-secondary-bg);font-size: 13px;"><br><strong>April</strong></p>
+                    <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: var(--bs-secondary-bg);font-size: 13px;">JUNE</p>
                 </div>
             </div>
             <div class="col d-flex align-items-end justify-content-xxl-center" style="background: rgba(44,50,55,0);border-radius: 0;border-color: rgba(33,37,41,0);padding-left: 20px;padding-right: 20px;margin-bottom: 20px;padding-bottom: 2px;filter: grayscale(0%);">
@@ -776,16 +780,17 @@
                         <div class="col-md-12 d-flex justify-content-center align-items-center justify-content-md-center" style="width: 100%;padding-right: 0px;padding-left: 0px;height: 10%;">
                             <div class="carousel slide" data-bs-ride="false" id="carousel-9" style="width: 100%;margin-top: 0px;">
                                 <div class="carousel-inner">
-                                    <div class="carousel-item active"><img class="w-100 d-block" src="https://pso2.com/players/update/2024-04/img/13/01.jpg" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px"></div>
-                                    <div class="carousel-item"><img class="w-100 d-block" src="https://pso2.com/players/update/2024-04/img/13/03.jpg" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px"></div>
-                                    <div class="carousel-item"><img class="w-100 d-block" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px" src="https://pso2.com/players/update/2024-04/img/13/05.jpg"></div>
+                                    <div class="carousel-item active"><img class="w-100 d-block" src="https://pso2.com/players/update/2024-06/img/12/01.jpg" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px"></div>
+                                    <div class="carousel-item"><img class="w-100 d-block" src="https://pso2.com/players/update/2024-06/img/12/02.jpg" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px"></div>
+                                    <div class="carousel-item"><img class="w-100 d-block" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px" src="https://pso2.com/players/update/2024-06/img/12/03.jpg"></div>
+                                    <div class="carousel-item"><img class="w-100 d-block" src="https://pso2.com/players/update/2024-06/img/12/04.jpg" alt="Slide Image"></div>
                                 </div>
                                 <div><a class="carousel-control-prev" href="#carousel-9" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-9" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
-                                <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-9" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-9" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#carousel-9" data-bs-slide-to="2"></button></div>
+                                <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-9" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-9" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#carousel-9" data-bs-slide-to="2"></button> <button type="button" data-bs-target="#carousel-9" data-bs-slide-to="3"></button></div>
                             </div>
                         </div>
                         <div class="col-12 d-flex justify-content-center">
-                            <h1 class="text-center" style="color: #b478d9;font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;">NOBLE SHADOWS</h1>
+                            <h1 class="text-center" style="color: #b478d9;font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;">CODE GEASS</h1>
                         </div>
                         <div class="col d-flex justify-content-center align-items-start" style="width: 100%;margin-bottom: 16px;height: 25%;">
                             <div class="d-flex justify-content-center align-items-center" style="height: 35px;width: 95%;border: 1px solid #b478d9;border-radius: 47px;">
@@ -796,12 +801,87 @@
                                 </div>
                                 <div class="col-6 d-flex justify-content-center" style="padding-left: 2px;padding-right: 5px;">
                                     <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: #b478d9;border-radius: 64px;color: var(--bs-secondary-bg);border-top-left-radius: 0px;border-bottom-left-radius: 0px;">
-                                        <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;"><br><strong>4/24/2024</strong><br><br></p>
+                                        <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;"><br><strong>6/19/2024</strong><br><br></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="col d-flex align-items-end justify-content-xxl-center" style="background: rgba(44,50,55,0);border-radius: 0;border-color: rgba(33,37,41,0);padding-left: 20px;padding-right: 20px;margin-bottom: 20px;padding-bottom: 2px;filter: grayscale(0%);">
+                <div class="container" style="padding-right: 1px;padding-left: 1px;margin-top: 1px;height: 10%;background: var(--bs-secondary-bg);border-radius: 13px;border-color: rgb(44,50,55);width: 100%;box-shadow: 0px 1px 4px 1px rgba(33,33,34,0.51);margin-bottom: 0px;filter: grayscale(0%) saturate(100%);">
+                    <div class="row d-flex d-xxl-flex justify-content-end mx-auto justify-content-xxl-end" style="margin-left: 0px;margin-right: 0px;height: 10%;">
+                        <div class="col-md-12 d-flex justify-content-center align-items-center justify-content-md-center" style="width: 100%;padding-right: 0px;padding-left: 0px;height: 10%;">
+                            <div class="carousel slide" data-bs-ride="false" id="carousel-10" style="width: 100%;margin-top: 0px;">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active"><img class="w-100 d-block" src="https://pso2.com/players/update/2024-06/img/09/01.jpg" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px"></div>
+                                    <div class="carousel-item"><img class="w-100 d-block" src="https://pso2.com/players/update/2024-06/img/09/02.jpg" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px"></div>
+                                    <div class="carousel-item"><img class="w-100 d-block" src="https://pso2.com/players/update/2024-06/img/09/04.jpg" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px"></div>
+                                    <div class="carousel-item"><img class="w-100 d-block" src="https://pso2.com/players/update/2024-06/img/09/05.jpg" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px"></div>
+                                </div>
+                                <div><a class="carousel-control-prev" href="#carousel-10" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-10" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                                <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-10" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-10" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#carousel-10" data-bs-slide-to="2"></button> <button type="button" data-bs-target="#carousel-10" data-bs-slide-to="3"></button></div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center">
+                            <h1 class="text-center" style="color: #b478d9;font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;">STYLISH AVENUE</h1>
+                        </div>
+                        <div class="col d-flex justify-content-center align-items-start" style="width: 100%;margin-bottom: 16px;height: 25%;">
+                            <div class="d-flex justify-content-center align-items-center" style="height: 35px;width: 95%;border: 1px solid #b478d9;border-radius: 47px;">
+                                <div class="col-6 d-flex justify-content-center" style="padding-left: 5px;padding-right: 2px;">
+                                    <div class="d-flex justify-content-center align-items-center" style="width: 108%;height: 25px;background: #b478d9;border-radius: 64px;border-bottom-right-radius: 0px;border-top-right-radius: 0px;">
+                                        <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: var(--bs-secondary-bg);"><strong>AC | NGS SPEC</strong><br><br></p>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex justify-content-center" style="padding-left: 2px;padding-right: 5px;">
+                                    <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: #b478d9;border-radius: 64px;color: var(--bs-secondary-bg);border-top-left-radius: 0px;border-bottom-left-radius: 0px;">
+                                        <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;"><br><strong>6/12/2024</strong><br><br></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex align-items-end justify-content-xxl-center" style="background: rgba(44,50,55,0);border-radius: 0;border-color: rgba(33,37,41,0);padding-left: 20px;padding-right: 20px;margin-bottom: 20px;padding-bottom: 2px;filter: grayscale(0%);">
+                <div class="container" style="padding-right: 1px;padding-left: 1px;margin-top: 1px;height: 10%;background: var(--bs-secondary-bg);border-radius: 13px;border-color: rgb(44,50,55);width: 100%;box-shadow: 0px 1px 4px 1px rgba(33,33,34,0.51);margin-bottom: 0px;filter: grayscale(0%) saturate(100%);">
+                    <div class="row d-flex d-xxl-flex justify-content-end mx-auto justify-content-xxl-end" style="margin-left: 0px;margin-right: 0px;height: 10%;">
+                        <div class="col-md-12 d-flex justify-content-center align-items-center justify-content-md-center" style="width: 100%;padding-right: 0px;padding-left: 0px;height: 10%;">
+                            <div class="carousel slide" data-bs-ride="false" id="carousel-6" style="width: 100%;margin-top: 0px;">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active"><img class="w-100 d-block" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px" src="https://pso2.com/players/update/2024-06/img/07/01.jpg"></div>
+                                    <div class="carousel-item"><img class="w-100 d-block" src="https://pso2.com/players/update/2024-06/img/07/02.jpg" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px"></div>
+                                    <div class="carousel-item"><img class="w-100 d-block" src="https://pso2.com/players/update/2024-06/img/07/03.jpg" alt="Slide Image"></div>
+                                </div>
+                                <div><a class="carousel-control-prev" href="#carousel-6" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-6" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                                <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-6" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-6" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#carousel-6" data-bs-slide-to="2"></button></div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center">
+                            <h1 class="text-center" style="color: #b478d9;font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;">BRIDAL&nbsp; FANTASIA</h1>
+                        </div>
+                        <div class="col d-flex justify-content-center align-items-start" style="width: 100%;margin-bottom: 16px;height: 25%;">
+                            <div class="d-flex justify-content-center align-items-center" style="height: 35px;width: 95%;border: 1px solid #b478d9;border-radius: 47px;">
+                                <div class="col-6 d-flex justify-content-center" style="padding-left: 5px;padding-right: 2px;">
+                                    <div class="d-flex justify-content-center align-items-center" style="width: 108%;height: 25px;background: #b478d9;border-radius: 64px;border-bottom-right-radius: 0px;border-top-right-radius: 0px;">
+                                        <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: var(--bs-secondary-bg);"><br><strong>AC | NGS SPEC</strong><br><br></p>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex justify-content-center" style="padding-left: 2px;padding-right: 5px;">
+                                    <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: #b478d9;border-radius: 64px;color: var(--bs-secondary-bg);border-top-left-radius: 0px;border-bottom-left-radius: 0px;">
+                                        <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;"><br><strong>6/5/2024</strong><br><br></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex d-xxl-flex justify-content-center align-items-center mx-auto justify-content-xxl-center align-items-xxl-center" style="margin-bottom: 20px;width: 100%;padding-left: 20px;padding-right: 20px;margin-top: 10px;">
+                <div style="width: 90%;height: 3px;background: radial-gradient(#b478d9, var(--bs-secondary-bg)), #b478d9;position: absolute;z-index: 1;border-radius: 58px;"></div>
+                <div class="d-flex justify-content-center align-items-center" style="width: 25%;height: 25px;background: #b478d9;border-radius: 64px;z-index: 2;">
+                    <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: var(--bs-secondary-bg);font-size: 13px;">APRIL</p>
                 </div>
             </div>
             <div class="col d-flex align-items-end justify-content-xxl-center" style="background: rgba(44,50,55,0);border-radius: 0;border-color: rgba(33,37,41,0);padding-left: 20px;padding-right: 20px;margin-bottom: 20px;padding-bottom: 2px;filter: grayscale(0%);">
@@ -832,74 +912,6 @@
                                 <div class="col-6 d-flex justify-content-center" style="padding-left: 2px;padding-right: 5px;">
                                     <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: #b478d9;border-radius: 64px;color: var(--bs-secondary-bg);border-top-left-radius: 0px;border-bottom-left-radius: 0px;">
                                         <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;"><br><strong>4/24/2024</strong><br><br></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col d-flex align-items-end justify-content-xxl-center" style="background: rgba(44,50,55,0);border-radius: 0;border-color: rgba(33,37,41,0);padding-left: 20px;padding-right: 20px;margin-bottom: 20px;padding-bottom: 2px;filter: grayscale(0%);">
-                <div class="container" style="padding-right: 1px;padding-left: 1px;margin-top: 1px;height: 10%;background: var(--bs-secondary-bg);border-radius: 13px;border-color: rgb(44,50,55);width: 100%;box-shadow: 0px 1px 4px 1px rgba(33,33,34,0.51);margin-bottom: 0px;filter: grayscale(0%) saturate(100%);">
-                    <div class="row d-flex d-xxl-flex justify-content-end mx-auto justify-content-xxl-end" style="margin-left: 0px;margin-right: 0px;height: 10%;">
-                        <div class="col-md-12 d-flex justify-content-center align-items-center justify-content-md-center" style="width: 100%;padding-right: 0px;padding-left: 0px;height: 10%;">
-                            <div class="carousel slide" data-bs-ride="false" id="carousel-10" style="width: 100%;margin-top: 0px;">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active"><img class="w-100 d-block" src="https://pso2.com/players/update/2024-04/img/07/01.jpg" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px"></div>
-                                    <div class="carousel-item"><img class="w-100 d-block" src="https://pso2.com/players/update/2024-04/img/07/02.jpg" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px"></div>
-                                    <div class="carousel-item"><img class="w-100 d-block" src="https://pso2.com/players/update/2024-04/img/07/03.jpg" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px"></div>
-                                    <div class="carousel-item"><img class="w-100 d-block" src="https://pso2.com/players/update/2024-04/img/07/04.jpg" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px"></div>
-                                </div>
-                                <div><a class="carousel-control-prev" href="#carousel-10" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-10" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
-                                <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-10" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-10" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#carousel-10" data-bs-slide-to="2"></button> <button type="button" data-bs-target="#carousel-10" data-bs-slide-to="3"></button></div>
-                            </div>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <h1 class="text-center" style="color: #b478d9;font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;">VINTAGE CLASSICS</h1>
-                        </div>
-                        <div class="col d-flex justify-content-center align-items-start" style="width: 100%;margin-bottom: 16px;height: 25%;">
-                            <div class="d-flex justify-content-center align-items-center" style="height: 35px;width: 95%;border: 1px solid #b478d9;border-radius: 47px;">
-                                <div class="col-6 d-flex justify-content-center" style="padding-left: 5px;padding-right: 2px;">
-                                    <div class="d-flex justify-content-center align-items-center" style="width: 108%;height: 25px;background: #b478d9;border-radius: 64px;border-bottom-right-radius: 0px;border-top-right-radius: 0px;">
-                                        <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: var(--bs-secondary-bg);"><strong>AC | NGS SPEC</strong><br><br></p>
-                                    </div>
-                                </div>
-                                <div class="col-6 d-flex justify-content-center" style="padding-left: 2px;padding-right: 5px;">
-                                    <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: #b478d9;border-radius: 64px;color: var(--bs-secondary-bg);border-top-left-radius: 0px;border-bottom-left-radius: 0px;">
-                                        <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;"><br><strong>4/10/2024</strong><br><br></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col d-flex align-items-end justify-content-xxl-center" style="background: rgba(44,50,55,0);border-radius: 0;border-color: rgba(33,37,41,0);padding-left: 20px;padding-right: 20px;margin-bottom: 20px;padding-bottom: 2px;filter: grayscale(0%);">
-                <div class="container" style="padding-right: 1px;padding-left: 1px;margin-top: 1px;height: 10%;background: var(--bs-secondary-bg);border-radius: 13px;border-color: rgb(44,50,55);width: 100%;box-shadow: 0px 1px 4px 1px rgba(33,33,34,0.51);margin-bottom: 0px;filter: grayscale(0%) saturate(100%);">
-                    <div class="row d-flex d-xxl-flex justify-content-end mx-auto justify-content-xxl-end" style="margin-left: 0px;margin-right: 0px;height: 10%;">
-                        <div class="col-md-12 d-flex justify-content-center align-items-center justify-content-md-center" style="width: 100%;padding-right: 0px;padding-left: 0px;height: 10%;">
-                            <div class="carousel slide" data-bs-ride="false" id="carousel-6" style="width: 100%;margin-top: 0px;">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active"><img class="w-100 d-block" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px" src="https://pso2.com/players/update/2024-04/img/02/01.jpg"></div>
-                                    <div class="carousel-item"><img class="w-100 d-block" src="https://pso2.com/players/update/2024-04/img/02/02.jpg" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px"></div>
-                                </div>
-                                <div><a class="carousel-control-prev" href="#carousel-6" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-6" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
-                                <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-6" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-6" data-bs-slide-to="1"></button></div>
-                            </div>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <h1 class="text-center" style="color: #b478d9;font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;">RUROUNI KENSHIN</h1>
-                        </div>
-                        <div class="col d-flex justify-content-center align-items-start" style="width: 100%;margin-bottom: 16px;height: 25%;">
-                            <div class="d-flex justify-content-center align-items-center" style="height: 35px;width: 95%;border: 1px solid #b478d9;border-radius: 47px;">
-                                <div class="col-6 d-flex justify-content-center" style="padding-left: 5px;padding-right: 2px;">
-                                    <div class="d-flex justify-content-center align-items-center" style="width: 108%;height: 25px;background: #b478d9;border-radius: 64px;border-bottom-right-radius: 0px;border-top-right-radius: 0px;">
-                                        <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: var(--bs-secondary-bg);"><br><strong>AC | NGS SPEC</strong><br><br></p>
-                                    </div>
-                                </div>
-                                <div class="col-6 d-flex justify-content-center" style="padding-left: 2px;padding-right: 5px;">
-                                    <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: #b478d9;border-radius: 64px;color: var(--bs-secondary-bg);border-top-left-radius: 0px;border-bottom-left-radius: 0px;">
-                                        <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;"><br><strong>4/3/2024</strong><br><br></p>
                                     </div>
                                 </div>
                             </div>
@@ -1060,7 +1072,7 @@
             <div class="col d-flex d-xxl-flex justify-content-center align-items-center mx-auto justify-content-xxl-center align-items-xxl-center" style="margin-bottom: 20px;width: 100%;padding-left: 20px;padding-right: 20px;margin-top: 10px;">
                 <div style="width: 90%;height: 3px;background: radial-gradient(#b478d9, var(--bs-secondary-bg)), #b478d9;position: absolute;z-index: 1;border-radius: 58px;"></div>
                 <div class="d-flex justify-content-center align-items-center" style="width: 25%;height: 25px;background: #b478d9;border-radius: 64px;z-index: 2;">
-                    <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: var(--bs-secondary-bg);font-size: 13px;">April</p>
+                    <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: var(--bs-secondary-bg);font-size: 13px;">JUNE</p>
                 </div>
             </div>
             <div class="col d-flex align-items-end justify-content-xxl-center" style="background: rgba(44,50,55,0);border-radius: 0;border-color: rgba(33,37,41,0);padding-left: 20px;padding-right: 20px;margin-bottom: 20px;">
@@ -1068,7 +1080,7 @@
                     <div class="row d-flex d-xxl-flex mx-auto align-items-xxl-center" style="margin-left: 0px;margin-right: 0px;height: 10%;">
                         <div class="col-md-12 d-flex justify-content-center align-items-center justify-content-md-center" style="width: 100%;padding-right: 0px;padding-left: 0px;height: 126px;margin: 0px;margin-top: -3px;"><button class="btn btn-primary disabled" type="button" style="width: 100%;height: 120px;border-width: 0px;margin-top: 2px;border-radius: 10px;opacity: 1;border-bottom-right-radius: 0;border-bottom-left-radius: 0;background: url(&quot;https://pso2.com/players/update/2024-04/img/09/01.jpg&quot;) center / cover;" disabled=""></button></div>
                         <div class="col-12 d-flex justify-content-center">
-                            <h1 class="d-flex justify-content-center" style="color: #b478d9;font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;">APRIL CONTENT</h1>
+                            <h1 class="d-flex justify-content-center" style="color: #b478d9;font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;">JUNE CONTENT</h1>
                         </div>
                         <div class="col d-flex justify-content-center align-items-start" style="width: 100%;margin-bottom: 16px;height: 25%;">
                             <div class="d-flex justify-content-center align-items-center" style="height: 35px;width: 95%;border: 1px solid #b478d9;border-radius: 47px;">
@@ -1079,7 +1091,7 @@
                                 </div>
                                 <div class="col-6 d-flex justify-content-center" style="padding-left: 2px;padding-right: 5px;">
                                     <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: #b478d9;border-radius: 64px;color: var(--bs-secondary-bg);border-top-left-radius: 0px;border-bottom-left-radius: 0px;">
-                                        <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;">4/2/2024</p>
+                                        <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;">6/5/2024</p>
                                     </div>
                                 </div>
                             </div>
@@ -1098,7 +1110,45 @@
                                     <div class="col-12 col-xxl-12 d-flex justify-content-center align-items-center justify-content-xxl-center align-items-xxl-center" style="margin-bottom: 10px;width: 100%;border-radius: -56px;">
                                         <div class="card" style="width: 100%;">
                                             <div class="card-body" style="background: #b478d9;width: 100%;background-blend-mode: lighten;">
-                                                <h1 class="d-flex justify-content-center" style="color: var(--bs-secondary-bg);font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;border-color: var(--bs-secondary-bg);">HALPHA ENVIROMENTAL<br>TESTING ZONE</h1>
+                                                <h1 class="d-flex justify-content-center" style="color: var(--bs-secondary-bg);font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;border-color: var(--bs-secondary-bg);">GIANT MUTANTS<br>CENTRAL/ WEST<br>KVARIS</h1>
+                                                <div class="col d-flex justify-content-center align-items-start" style="margin-bottom: 16px;">
+                                                    <div class="d-flex justify-content-center align-items-center" style="height: 35px;width: 95%;border-radius: 47px;border: 1px solid var(--bs-secondary-bg) ;">
+                                                        <div class="col-6 d-flex justify-content-center" style="padding-left: 5px;padding-right: 5px;width: 100%;">
+                                                            <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-right: 5px;color: var(--bs-secondary-bg);">
+                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">REGION</p>
+                                                            </div>
+                                                            <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-left: 5px;color: var(--bs-secondary-bg);">
+                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;"><br><strong>6/26/2024</strong><br><br></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-xxl-12 d-flex justify-content-center align-items-center justify-content-xxl-center align-items-xxl-center" style="margin-bottom: 10px;width: 100%;border-radius: -56px;">
+                                        <div class="card" style="width: 100%;">
+                                            <div class="card-body" style="background: #b478d9;width: 100%;background-blend-mode: lighten;">
+                                                <h1 class="d-flex justify-content-center" style="color: var(--bs-secondary-bg);font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;border-color: var(--bs-secondary-bg);">DARK FALZ<br>SOLUS RANK 2</h1>
+                                                <div class="col d-flex justify-content-center align-items-start" style="margin-bottom: 16px;">
+                                                    <div class="d-flex justify-content-center align-items-center" style="height: 35px;width: 95%;border-radius: 47px;border: 1px solid var(--bs-secondary-bg) ;">
+                                                        <div class="col-6 d-flex justify-content-center" style="padding-left: 5px;padding-right: 5px;width: 100%;">
+                                                            <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-right: 5px;color: var(--bs-secondary-bg);">
+                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">QUEST</p>
+                                                            </div>
+                                                            <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-left: 5px;color: var(--bs-secondary-bg);">
+                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;"><br><strong>6/19/2024</strong><br><br></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-xxl-12 d-flex justify-content-center align-items-center justify-content-xxl-center align-items-xxl-center" style="margin-bottom: 10px;width: 100%;border-radius: -56px;">
+                                        <div class="card" style="width: 100%;">
+                                            <div class="card-body" style="background: #b478d9;width: 100%;background-blend-mode: lighten;">
+                                                <h1 class="d-flex justify-content-center" style="color: var(--bs-secondary-bg);font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;border-color: var(--bs-secondary-bg);">SAND ROAD<br>SPRINT&nbsp;</h1>
                                                 <div class="col d-flex justify-content-center align-items-start" style="margin-bottom: 16px;">
                                                     <div class="d-flex justify-content-center align-items-center" style="height: 35px;width: 95%;border-radius: 47px;border: 1px solid var(--bs-secondary-bg) ;">
                                                         <div class="col-6 d-flex justify-content-center" style="padding-left: 5px;padding-right: 5px;width: 100%;">
@@ -1106,74 +1156,7 @@
                                                                 <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">LTQ</p>
                                                             </div>
                                                             <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-left: 5px;color: var(--bs-secondary-bg);">
-                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;"><br><strong>4/24/2024</strong><br><br></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-xxl-12 d-flex justify-content-center align-items-center justify-content-xxl-center align-items-xxl-center" style="margin-bottom: 10px;width: 100%;border-radius: -56px;">
-                                        <div class="card" style="width: 100%;">
-                                            <div class="card-body" style="background: #b478d9;width: 100%;background-blend-mode: lighten;">
-                                                <h1 class="d-flex justify-content-center" style="color: var(--bs-secondary-bg);font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;border-color: var(--bs-secondary-bg);">HAPPY RAPPY <br>RUMBLE</h1>
-                                                <div class="col d-flex justify-content-center align-items-start" style="margin-bottom: 16px;">
-                                                    <div class="d-flex justify-content-center align-items-center" style="height: 35px;width: 95%;border-radius: 47px;border: 1px solid var(--bs-secondary-bg) ;">
-                                                        <div class="col-6 d-flex justify-content-center" style="padding-left: 5px;padding-right: 5px;width: 100%;">
-                                                            <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-right: 5px;color: var(--bs-secondary-bg);">
-                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">URGENT QUEST</p>
-                                                            </div>
-                                                            <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-left: 5px;color: var(--bs-secondary-bg);">
-                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;"><br><strong>4/24/2024</strong><br><br></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-xxl-12 d-flex justify-content-center align-items-center justify-content-xxl-center align-items-xxl-center" style="margin-bottom: 10px;width: 100%;border-radius: -56px;">
-                                        <div class="card" style="width: 100%;">
-                                            <div class="card-body" style="background: #b478d9;width: 100%;background-blend-mode: lighten;">
-                                                <h1 class="d-flex justify-content-center" style="color: var(--bs-secondary-bg);font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;border-color: var(--bs-secondary-bg);">NGS 3RD<br>ANNIVERSARY</h1>
-                                                <p class="d-xxl-flex justify-content-xxl-center" style="color: var(--bs-body-bg);font-family: Roboto, sans-serif;text-align: center;">9-star Aeoni Dekelion weapon series in the Seasonal Points Exchange Shop!</p>
-                                                <div class="col d-flex d-xxl-flex justify-content-center align-items-center mx-auto justify-content-xxl-center align-items-xxl-center" style="margin-bottom: 20px;width: 100%;padding-left: 20px;padding-right: 20px;margin-top: 10px;">
-                                                    <div style="width: 90%;height: 3px;background: radial-gradient(#b478d9, var(--bs-secondary-bg)), #b478d9;position: absolute;z-index: 1;border-radius: 58px;"></div>
-                                                </div>
-                                                <p class="d-xxl-flex justify-content-xxl-center" style="color: var(--bs-body-bg);font-family: Roboto, sans-serif;text-align: center;">xiemi ina hakama is your navigator!</p>
-                                                <div style="width: 90%;height: 3px;background: radial-gradient(#b478d9, var(--bs-secondary-bg)), #b478d9;position: absolute;z-index: 1;border-radius: 58px;"></div>
-                                                <p class="d-xxl-flex justify-content-xxl-center" style="color: var(--bs-body-bg);font-family: Roboto, sans-serif;margin-top: 38px;text-align: center;">Additional Limited-time Tasks and Title Tasks.</p>
-                                                <div style="width: 90%;height: 3px;background: radial-gradient(#b478d9, var(--bs-secondary-bg)), #b478d9;position: absolute;z-index: 1;border-radius: 58px;"></div>
-                                                <p class="d-xxl-flex justify-content-xxl-center" style="color: var(--bs-body-bg);font-family: Roboto, sans-serif;margin-top: 38px;text-align: center;">ARKS Records for Field Race: Stia Outskirts Dash Stage 1</p>
-                                                <div style="width: 90%;height: 3px;background: radial-gradient(#b478d9, var(--bs-secondary-bg)), #b478d9;position: absolute;z-index: 1;border-radius: 58px;"></div>
-                                                <div class="col d-flex justify-content-center align-items-start" style="margin-bottom: 16px;">
-                                                    <div class="d-flex justify-content-center align-items-center" style="height: 35px;width: 95%;border-radius: 47px;border: 1px solid var(--bs-secondary-bg) ;">
-                                                        <div class="col-6 d-flex justify-content-center" style="padding-left: 5px;padding-right: 5px;width: 100%;">
-                                                            <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-right: 5px;color: var(--bs-secondary-bg);">
-                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">EVENT</p>
-                                                            </div>
-                                                            <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-left: 5px;color: var(--bs-secondary-bg);">
-                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">3/13/2024</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-xxl-12 d-flex justify-content-center align-items-center justify-content-xxl-center align-items-xxl-center" style="margin-bottom: 10px;width: 100%;border-radius: -56px;">
-                                        <div class="card" style="width: 100%;">
-                                            <div class="card-body" style="background: #b478d9;width: 100%;background-blend-mode: lighten;">
-                                                <h1 class="d-flex justify-content-center" style="color: var(--bs-secondary-bg);font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;border-color: var(--bs-secondary-bg);">PLANETCRUSHER<br>BLITZ</h1>
-                                                <div class="col d-flex justify-content-center align-items-start" style="margin-bottom: 16px;">
-                                                    <div class="d-flex justify-content-center align-items-center" style="height: 35px;width: 95%;border-radius: 47px;border: 1px solid var(--bs-secondary-bg) ;">
-                                                        <div class="col-6 d-flex justify-content-center" style="padding-left: 5px;padding-right: 5px;width: 100%;">
-                                                            <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-right: 5px;color: var(--bs-secondary-bg);">
-                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">STANDING QUEST</p>
-                                                            </div>
-                                                            <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-left: 5px;color: var(--bs-secondary-bg);">
-                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">4/17/2024</p>
+                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;"><br><strong>6/12/2024</strong><br><br><br></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1185,25 +1168,25 @@
                                         <div class="card" style="width: 100%;">
                                             <div class="card-body" style="background: #b478d9;width: 100%;background-blend-mode: lighten;">
                                                 <h1 class="d-flex justify-content-center" style="color: var(--bs-secondary-bg);font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;border-color: var(--bs-secondary-bg);">QoL</h1>
-                                                <p class="d-xxl-flex justify-content-xxl-center" style="color: var(--bs-body-bg);font-family: Roboto, sans-serif;text-align: center;"><span style="color: rgb(33, 37, 41);">Region designations removed for Daily Task! Alliance Task Adjustments too</span></p>
+                                                <p class="d-xxl-flex justify-content-xxl-center" style="color: var(--bs-body-bg);font-family: Roboto, sans-serif;text-align: center;"><span style="color: rgb(12, 39, 75); background-color: transparent;">Additional setting for Vital Gauge Design to hide HP/PP Gauge!</span></p>
                                                 <div class="col d-flex d-xxl-flex justify-content-center align-items-center mx-auto justify-content-xxl-center align-items-xxl-center" style="margin-bottom: 20px;width: 100%;padding-left: 20px;padding-right: 20px;margin-top: 10px;">
                                                     <div style="width: 90%;height: 3px;background: radial-gradient(#b478d9, var(--bs-secondary-bg)), #b478d9;position: absolute;z-index: 1;border-radius: 58px;"></div>
                                                 </div>
-                                                <p class="d-xxl-flex justify-content-xxl-center" style="color: var(--bs-body-bg);font-family: Roboto, sans-serif;text-align: center;"><br><span style="color: rgb(12, 39, 75); background-color: transparent;">Augment Capsules like C/Endymio and C/Astrio S can be directly used as Material Items at Item Enhancement!</span><br><br><br></p>
+                                                <p class="d-xxl-flex justify-content-xxl-center" style="color: var(--bs-body-bg);font-family: Roboto, sans-serif;text-align: center;"><br><span style="color: rgb(12, 39, 75); background-color: transparent;">Now your last-opened Item Details page will be saved!</span></p>
                                                 <div style="width: 90%;height: 3px;background: radial-gradient(#b478d9, var(--bs-secondary-bg)), #b478d9;position: absolute;z-index: 1;border-radius: 58px;"></div>
-                                                <p class="d-xxl-flex justify-content-xxl-center" style="color: var(--bs-body-bg);font-family: Roboto, sans-serif;margin-top: 38px;text-align: center;"><span style="color: rgb(12, 39, 75); background-color: transparent;">Send Kudos feature added to GP Tree in Creative Space! Get SG when you send Kudos!</span><br><br></p>
+                                                <p class="d-xxl-flex justify-content-xxl-center" style="color: var(--bs-body-bg);font-family: Roboto, sans-serif;margin-top: 38px;text-align: center;"><span style="color: rgb(12, 39, 75); background-color: transparent;">Items that have expiration dates will be listed first in Default Sorting under the Misc. category of the Inventory!</span></p>
                                                 <div style="width: 90%;height: 3px;background: radial-gradient(#b478d9, var(--bs-secondary-bg)), #b478d9;position: absolute;z-index: 1;border-radius: 58px;"></div>
-                                                <p class="d-xxl-flex justify-content-xxl-center" style="color: var(--bs-body-bg);font-family: Roboto, sans-serif;margin-top: 38px;text-align: center;"><br><br><span style="color: rgb(12, 39, 75); background-color: transparent;">Design save slots will be doubled from 20 to 40!</span><br><span style="color: rgb(12, 39, 75); background-color: transparent;">Earn Genesis Points as rewards for completing Creative Space Limited-time Tasks!</span><br><span style="color: rgb(12, 39, 75); background-color: transparent;">New feature: Pause Emotes in Easy Photo Mode! (Premium Set only)</span><br><br></p>
+                                                <p class="d-xxl-flex justify-content-xxl-center" style="color: var(--bs-body-bg);font-family: Roboto, sans-serif;margin-top: 38px;text-align: center;"><span style="color: rgb(12, 39, 75); background-color: transparent;">Pharia and Zephetto ARKS ID Backgrounds!</span></p>
                                                 <div style="width: 90%;height: 3px;background: radial-gradient(#b478d9, var(--bs-secondary-bg)), #b478d9;position: absolute;z-index: 1;border-radius: 58px;"></div>
-                                                <p class="d-xxl-flex justify-content-xxl-center" style="color: var(--bs-body-bg);font-family: Roboto, sans-serif;margin-top: 38px;text-align: center;"><br><span style="color: rgb(12, 39, 75); background-color: transparent;">Refined skin added for Base Body T1 and shaved head in the Salon!</span><br></p>
+                                                <p class="d-xxl-flex justify-content-xxl-center" style="color: var(--bs-body-bg);font-family: Roboto, sans-serif;margin-top: 38px;text-align: center;"><br><br><span style="color: rgb(12, 39, 75); background-color: transparent;">Even more Looks Premium Slots! Up to 50 slots for Premium Users!</span></p>
                                                 <div class="col d-flex justify-content-center align-items-start" style="margin-bottom: 16px;">
                                                     <div class="d-flex justify-content-center align-items-center" style="height: 35px;width: 95%;border-radius: 47px;border: 1px solid var(--bs-secondary-bg) ;">
                                                         <div class="col-6 d-flex justify-content-center" style="padding-left: 5px;padding-right: 5px;width: 100%;">
                                                             <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-right: 5px;color: var(--bs-secondary-bg);">
-                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">EVENT</p>
+                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;"><br><strong>QoL</strong><br><br></p>
                                                             </div>
                                                             <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-left: 5px;color: var(--bs-secondary-bg);">
-                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">4/10/2024</p>
+                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;"><br><strong>6/5/2024</strong><br><br></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1214,15 +1197,15 @@
                                     <div class="col-12 col-xxl-12 d-flex justify-content-center align-items-center justify-content-xxl-center align-items-xxl-center" style="margin-bottom: 10px;width: 100%;border-radius: -56px;">
                                         <div class="card" style="width: 100%;">
                                             <div class="card-body" style="background: #b478d9;width: 100%;background-blend-mode: lighten;">
-                                                <h1 class="d-flex justify-content-center" style="color: var(--bs-secondary-bg);font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;border-color: var(--bs-secondary-bg);">MISSION PASS<br>SEASON 31</h1>
+                                                <h1 class="d-flex justify-content-center" style="color: var(--bs-secondary-bg);font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;border-color: var(--bs-secondary-bg);">NEW <br>CREATIVE SPACE<br>STUFF</h1>
                                                 <div class="col d-flex justify-content-center align-items-start" style="margin-bottom: 16px;">
                                                     <div class="d-flex justify-content-center align-items-center" style="height: 35px;width: 95%;border-radius: 47px;border: 1px solid var(--bs-secondary-bg) ;">
                                                         <div class="col-6 d-flex justify-content-center" style="padding-left: 5px;padding-right: 5px;width: 100%;">
                                                             <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-right: 5px;color: var(--bs-secondary-bg);">
-                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">MISSION PASS</p>
+                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">CS</p>
                                                             </div>
                                                             <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-left: 5px;color: var(--bs-secondary-bg);">
-                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">4/10/2024</p>
+                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">6/5/2024</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1233,15 +1216,15 @@
                                     <div class="col-12 col-xxl-12 d-flex justify-content-center align-items-center justify-content-xxl-center align-items-xxl-center" style="margin-bottom: 10px;width: 100%;border-radius: -56px;">
                                         <div class="card" style="width: 100%;">
                                             <div class="card-body" style="background: #b478d9;width: 100%;background-blend-mode: lighten;">
-                                                <h1 class="d-flex justify-content-center" style="color: var(--bs-secondary-bg);font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;border-color: var(--bs-secondary-bg);">TECH ARTS<br>CUSTOMIZATIONS</h1>
+                                                <h1 class="d-flex justify-content-center" style="color: var(--bs-secondary-bg);font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;border-color: var(--bs-secondary-bg);">AUGMENT TRANSFER</h1>
                                                 <div class="col d-flex justify-content-center align-items-start" style="margin-bottom: 16px;">
                                                     <div class="d-flex justify-content-center align-items-center" style="height: 35px;width: 95%;border-radius: 47px;border: 1px solid var(--bs-secondary-bg) ;">
                                                         <div class="col-6 d-flex justify-content-center" style="padding-left: 5px;padding-right: 5px;width: 100%;">
                                                             <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-right: 5px;color: var(--bs-secondary-bg);">
-                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">CLASS</p>
+                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">QoL</p>
                                                             </div>
                                                             <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-left: 5px;color: var(--bs-secondary-bg);">
-                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">4/10/2024</p>
+                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">6/5/2024</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1252,15 +1235,15 @@
                                     <div class="col-12 col-xxl-12 d-flex justify-content-center align-items-center justify-content-xxl-center align-items-xxl-center" style="margin-bottom: 10px;width: 100%;border-radius: -56px;">
                                         <div class="card" style="width: 100%;">
                                             <div class="card-body" style="background: #b478d9;width: 100%;background-blend-mode: lighten;">
-                                                <h1 class="d-flex justify-content-center" style="color: var(--bs-secondary-bg);font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;border-color: var(--bs-secondary-bg);">ALL SHIP MATCHMAKING<br>FOR LECIEL</h1>
+                                                <h1 class="d-flex justify-content-center" style="color: var(--bs-secondary-bg);font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;border-color: var(--bs-secondary-bg);">CLASS CAP 90</h1>
                                                 <div class="col d-flex justify-content-center align-items-start" style="margin-bottom: 16px;">
                                                     <div class="d-flex justify-content-center align-items-center" style="height: 35px;width: 95%;border-radius: 47px;border: 1px solid var(--bs-secondary-bg) ;">
                                                         <div class="col-6 d-flex justify-content-center" style="padding-left: 5px;padding-right: 5px;width: 100%;">
                                                             <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-right: 5px;color: var(--bs-secondary-bg);">
-                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">UPDATE</p>
+                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">LEVEL CAP</p>
                                                             </div>
                                                             <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-left: 5px;color: var(--bs-secondary-bg);">
-                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">4/10/2024</p>
+                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">6/5/2024</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1271,15 +1254,34 @@
                                     <div class="col-12 col-xxl-12 d-flex justify-content-center align-items-center justify-content-xxl-center align-items-xxl-center" style="margin-bottom: 10px;width: 100%;border-radius: -56px;">
                                         <div class="card" style="width: 100%;">
                                             <div class="card-body" style="background: #b478d9;width: 100%;background-blend-mode: lighten;">
-                                                <h1 class="d-flex justify-content-center" style="color: var(--bs-secondary-bg);font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;border-color: var(--bs-secondary-bg);">UPDATE FOR LECIEL</h1>
+                                                <h1 class="d-flex justify-content-center" style="color: var(--bs-secondary-bg);font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;border-color: var(--bs-secondary-bg);">NAMELESS CITY</h1>
                                                 <div class="col d-flex justify-content-center align-items-start" style="margin-bottom: 16px;">
                                                     <div class="d-flex justify-content-center align-items-center" style="height: 35px;width: 95%;border-radius: 47px;border: 1px solid var(--bs-secondary-bg) ;">
                                                         <div class="col-6 d-flex justify-content-center" style="padding-left: 5px;padding-right: 5px;width: 100%;">
                                                             <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-right: 5px;color: var(--bs-secondary-bg);">
-                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">QUEST</p>
+                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">NEW QUEST</p>
                                                             </div>
                                                             <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-left: 5px;color: var(--bs-secondary-bg);">
-                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">4/10/2024</p>
+                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">6/5/2024</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-xxl-12 d-flex justify-content-center align-items-center justify-content-xxl-center align-items-xxl-center" style="margin-bottom: 10px;width: 100%;border-radius: -56px;">
+                                        <div class="card" style="width: 100%;">
+                                            <div class="card-body" style="background: #b478d9;width: 100%;background-blend-mode: lighten;">
+                                                <h1 class="d-flex justify-content-center" style="color: var(--bs-secondary-bg);font-family: Roboto, sans-serif;font-weight: bold;margin-top: 4px;text-align: center;font-size: 200%;border-color: var(--bs-secondary-bg);">NEW STORY</h1>
+                                                <div class="col d-flex justify-content-center align-items-start" style="margin-bottom: 16px;">
+                                                    <div class="d-flex justify-content-center align-items-center" style="height: 35px;width: 95%;border-radius: 47px;border: 1px solid var(--bs-secondary-bg) ;">
+                                                        <div class="col-6 d-flex justify-content-center" style="padding-left: 5px;padding-right: 5px;width: 100%;">
+                                                            <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-right: 5px;color: var(--bs-secondary-bg);">
+                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">MSQ</p>
+                                                            </div>
+                                                            <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 25px;background: var(--bs-body-bg);border-radius: 64px;margin-left: 5px;color: var(--bs-secondary-bg);">
+                                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 16px;font-family: Roboto, sans-serif;font-weight: bold;color: #b478d9;">6/5/2024</p>
                                                             </div>
                                                         </div>
                                                     </div>
