@@ -80,6 +80,8 @@ button:active {
 @media (min-width: 300px) {
   #offcanvas-1 {
     height: 45%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
   }
 }
 
@@ -89,6 +91,7 @@ button:active {
     height: 100%;
     /*position: absolute;*/
     margin-left: 77%;
+    border-radius: 15px;
   }
 }
 
