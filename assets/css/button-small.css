@@ -79,7 +79,7 @@ button:active {
 
 @media (min-width: 300px) {
   #offcanvas-1 {
-    height: 371px;
+    height: 60%;
   }
 }
 
