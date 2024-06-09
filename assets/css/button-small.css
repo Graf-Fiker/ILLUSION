@@ -79,9 +79,7 @@ button:active {
 
 @media (min-width: 300px) {
   #offcanvas-1 {
-    height: 38%;
-    border-top-left-radius: 5%;
-    border-top-right-radius: 5%;
+    height: 45%;
   }
 }
 
