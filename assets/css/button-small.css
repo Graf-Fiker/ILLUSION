@@ -77,3 +77,18 @@ button:active {
 .card-body {
 }
 
+@media (min-width: 300px) {
+  #offcanvas-1 {
+    height: 50%;
+  }
+}
+
+@media (min-width: 1400px) {
+  #offcanvas-1 {
+    width: 23%;
+    height: 100%;
+    /*position: absolute;*/
+    margin-left: 77%;
+  }
+}
+
