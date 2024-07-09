@@ -85,13 +85,33 @@ button:active {
   }
 }
 
+@media (min-width: 300px) {
+  #offcanvas-1 {
+    height: 45%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+}
+
 @media (min-width: 1400px) {
   #offcanvas-1 {
     width: 23%;
     height: 100%;
-    /*position: absolute;*/
+    position: absolute;
     margin-left: 77%;
     border-radius: 15px;
+    display: none;
+  }
+}
+
+@media (min-width: 300px) {
+  div {
+  }
+}
+
+@media (max-width: 1400px) {
+  .btn-toolbar {
+    display: none;
   }
 }
 
