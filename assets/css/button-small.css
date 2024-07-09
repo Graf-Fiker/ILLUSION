@@ -108,3 +108,11 @@ button:active {
 #nav-buttons {
 }
 
+#Date-break {
+  margin-bottom: 20px;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 10px;
+}
+
