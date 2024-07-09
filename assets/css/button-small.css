@@ -96,10 +96,10 @@ button:active {
 @media (min-width: 1400px) {
   #offcanvas-1 {
     width: 23%;
-    height: 100%;
     position: absolute;
     margin-left: 77%;
     border-radius: 15px;
+    height: 100%;
   }
 }
 
