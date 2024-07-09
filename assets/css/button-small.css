@@ -79,27 +79,9 @@ button:active {
 
 @media (min-width: 300px) {
   #offcanvas-1 {
-    height: 45%;
+    /*height: 45%;*/
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-  }
-}
-
-@media (min-width: 300px) {
-  #offcanvas-1 {
-    height: 45%;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-  }
-}
-
-@media (min-width: 1400px) {
-  #offcanvas-1 {
-    width: 23%;
-    position: absolute;
-    margin-left: 77%;
-    border-radius: 15px;
-    height: 100%;
   }
 }
 
@@ -112,5 +94,17 @@ button:active {
   .btn-toolbar {
     display: none;
   }
+}
+
+#gg {
+}
+
+@media (min-width: 1400px) {
+  #EYE {
+    opacity: 0%;
+  }
+}
+
+#nav-buttons {
 }
 
