@@ -116,3 +116,7 @@ button:active {
   margin-top: 10px;
 }
 
+#center-button {
+  bottom: 12px;
+}
+
