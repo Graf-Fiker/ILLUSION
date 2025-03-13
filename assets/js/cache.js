@@ -21,20 +21,35 @@ self.addEventListener('install', (event) => {
   );
 });
 
-self.addEventListener('fetch', (event) => {
+elf.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
-      // Cache hit - return response
       if (response) {
-        return response;
+        return response; // Return cached response
       }
-      return fetch(event.request); // No cache match, fetch from network
+
+      // Check if it's an image request (adjust as needed)
+      if (event.request.url.match(/\.(jpe?g|png|gif|svg|webp)$/i)) {
+        return fetch(event.request).then((networkResponse) => {
+          // Clone the response to cache it
+          const responseToCache = networkResponse.clone();
+
+          caches.open('image-cache').then((cache) => {
+            cache.put(event.request, responseToCache); // Cache the image
+          });
+
+          return networkResponse; // Return the network response
+        });
+      }
+
+      // Handle other requests (HTML, CSS, JS) as before
+      return fetch(event.request);
     })
   );
 });
 
 self.addEventListener('activate', (event) => {
-    const cacheWhitelist = [CACHE_NAME];
+    const cacheWhitelist = ['my-site-cache-v1', 'image-cache']; // Add image-cache to whitelist
     event.waitUntil(
         caches.keys().then((cacheNames) => {
             return Promise.all(
