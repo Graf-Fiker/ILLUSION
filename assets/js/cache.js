@@ -21,44 +21,55 @@ self.addEventListener('install', (event) => {
   );
 });
 
-elf.addEventListener('fetch', (event) => {
+eself.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      if (response) {
-        return response; // Return cached response
+    caches.match(event.request).then((cachedResponse) => {
+      if (cachedResponse) {
+        return cachedResponse; // Return cached response if available
       }
 
-      // Check if it's an image request (adjust as needed)
+      // Check if it's an image request
       if (event.request.url.match(/\.(jpe?g|png|gif|svg|webp)$/i)) {
         return fetch(event.request).then((networkResponse) => {
-          // Clone the response to cache it
           const responseToCache = networkResponse.clone();
 
           caches.open('image-cache').then((cache) => {
-            cache.put(event.request, responseToCache); // Cache the image
+            cache.put(event.request, responseToCache);
           });
 
-          return networkResponse; // Return the network response
+          return networkResponse;
+        }).catch(() => {
+          return caches.match('/offline.html'); //serve offline page.
         });
       }
 
-      // Handle other requests (HTML, CSS, JS) as before
-      return fetch(event.request);
+      // Handle other requests (HTML, CSS, JS)
+      return fetch(event.request).then((networkResponse) => {
+        const responseToCache = networkResponse.clone();
+
+        caches.open(CACHE_NAME).then((cache) => {
+          cache.put(event.request, responseToCache);
+        });
+
+        return networkResponse;
+      }).catch(() => {
+          return caches.match('/offline.html'); //serve offline page.
+      });
     })
   );
 });
 
 self.addEventListener('activate', (event) => {
-    const cacheWhitelist = ['my-site-cache-v1', 'image-cache']; // Add image-cache to whitelist
-    event.waitUntil(
-        caches.keys().then((cacheNames) => {
-            return Promise.all(
-                cacheNames.map((cacheName) => {
-                    if (cacheWhitelist.indexOf(cacheName) === -1) {
-                        return caches.delete(cacheName);
-                    }
-                })
-            );
+  const cacheWhitelist = ['my-site-cache-v1', 'image-cache'];
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
         })
-    );
+      );
+    })
+  );
 });
