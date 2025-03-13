@@ -1,7 +1,7 @@
 // JavaScript
 $(document).ready(function () {
   // Define the latest published version (you need to replace this with your actual version number)
-  var latestPublishedVersion = "1.1.0z"; 
+  var latestPublishedVersion = "1.1.1z"; 
 
   // Get the stored version from localStorage (assuming you store the last known version)
   var lastKnownVersion = localStorage.getItem('lastKnownVersion');
