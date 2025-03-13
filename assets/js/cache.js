@@ -8,7 +8,7 @@ const urlsToCache = [
   '/timer_daily.js',
   '/Navbar Pages.js',
   '/version-check.js',
-  '/service-worker.js',// Cache your JavaScript (if you have one)
+  '/script.js',// Cache your JavaScript (if you have one)
   // Add other critical assets like fonts, etc.
 ];
 
@@ -21,55 +21,79 @@ self.addEventListener('install', (event) => {
   );
 });
 
-eself.addEventListener('fetch', (event) => {
+self.addEventListener('fetch', (event) => {
+
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse; // Return cached response if available
+
+    caches.match(event.request).then((response) => {
+
+      if (response) {
+
+        return response; // Return cached response
+
       }
 
-      // Check if it's an image request
+
+      // Check if it's an image request (adjust as needed)
+
       if (event.request.url.match(/\.(jpe?g|png|gif|svg|webp)$/i)) {
+
         return fetch(event.request).then((networkResponse) => {
+
+          // Clone the response to cache it
+
           const responseToCache = networkResponse.clone();
 
+
           caches.open('image-cache').then((cache) => {
-            cache.put(event.request, responseToCache);
+
+            cache.put(event.request, responseToCache); // Cache the image
+
           });
 
-          return networkResponse;
-        }).catch(() => {
-          return caches.match('/offline.html'); //serve offline page.
+
+          return networkResponse; // Return the network response
+
         });
+
       }
 
-      // Handle other requests (HTML, CSS, JS)
-      return fetch(event.request).then((networkResponse) => {
-        const responseToCache = networkResponse.clone();
 
-        caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, responseToCache);
-        });
+      // Handle other requests (HTML, CSS, JS) as before
 
-        return networkResponse;
-      }).catch(() => {
-          return caches.match('/offline.html'); //serve offline page.
-      });
+      return fetch(event.request);
+
     })
+
   );
+
 });
+
 
 self.addEventListener('activate', (event) => {
-  const cacheWhitelist = ['my-site-cache-v1', 'image-cache'];
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
-            return caches.delete(cacheName);
-          }
+
+    const cacheWhitelist = ['my-site-cache-v1', 'image-cache']; // Add image-cache to whitelist
+
+    event.waitUntil(
+
+        caches.keys().then((cacheNames) => {
+
+            return Promise.all(
+
+                cacheNames.map((cacheName) => {
+
+                    if (cacheWhitelist.indexOf(cacheName) === -1) {
+
+                        return caches.delete(cacheName);
+
+                    }
+
+                })
+
+            );
+
         })
-      );
-    })
-  );
-});
+
+    );
+
+}); 
