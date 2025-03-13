@@ -3,7 +3,12 @@ const urlsToCache = [
   '/', // Cache the root URL (index.html or similar)
   '/index.html', // Explicitly cache your main HTML file
   '/style.css', // Cache your CSS
-  '/script.js', // Cache your JavaScript (if you have one)
+  '/cache.js',
+  '/timer_weekly.js',
+  '/timer_daily.js',
+  '/Navbar Pages.js',
+  '/version-check.js',
+  '/service-worker.js',// Cache your JavaScript (if you have one)
   // Add other critical assets like fonts, etc.
 ];
 
