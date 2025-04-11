@@ -104,6 +104,7 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/swiper-icons.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
@@ -114,6 +115,8 @@
     <link rel="stylesheet" href="assets/css/Frosty-Glass-Card-Single-1.css">
     <link rel="stylesheet" href="assets/css/Hero-Carousel-images.css">
     <link rel="stylesheet" href="assets/css/SCRATCH-CASRD-CAR.css">
+    <link rel="stylesheet" href="assets/css/Simple-Slider-swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/Simple-Slider.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/timer.css">
     <link rel="stylesheet" href="assets/css/untitled-2.css">
@@ -166,6 +169,11 @@
                         <path d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z"></path>
                         <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
                     </svg>App Settings</button></div>
+            <div class="col d-flex justify-content-center align-items-center" style="width: 100%;"><button class="btn btn-primary d-flex justify-content-start align-items-center" type="button" data-bs-dismiss="offcanvas" data-bs-target="#modal-3" data-bs-toggle="modal" style="background: rgba(0,0,0,0.1);-webkit-backdrop-filter: blur(10px);width: 100%;height: 38px;margin-bottom: 5px;border-color: #b478d9;box-shadow: -1px 0px 7px rgb(0,0,0);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-settings-2" style="margin-right: 5px;">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z"></path>
+                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                    </svg>Getting Started</button></div>
             <div class="col d-flex justify-content-center align-items-center" style="width: 100%;font-weight: bold;"><button class="btn btn-primary d-flex justify-content-start align-items-center" type="button" data-bs-dismiss="offcanvas" data-bs-target="#modal-1" data-bs-toggle="modal" style="background: rgba(0,0,0,0.1);-webkit-backdrop-filter: blur(10px);width: 100%;height: 38px;margin-bottom: 5px;border-color: #b478d9;box-shadow: -1px 0px 7px rgb(0,0,0);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-moneybag" style="margin-right: 5px;">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M9.5 3h5a1.5 1.5 0 0 1 1.5 1.5a3.5 3.5 0 0 1 -3.5 3.5h-1a3.5 3.5 0 0 1 -3.5 -3.5a1.5 1.5 0 0 1 1.5 -1.5z"></path>
@@ -660,54 +668,24 @@
     <div class="modal fade" role="dialog" tabindex="-1" id="modal-3">
         <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down" role="document">
             <div class="modal-content">
-                <div class="modal-header d-flex justify-content-start" style="border-bottom-style: none;background: var(--bs-secondary-bg);"><button class="btn btn-light" type="button" data-bs-dismiss="modal" style="background: rgba(248,249,250,0);border-style: none;"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" style="color: #b478d9;width: 26px;height: 27px;">
-                            <path d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
-                        </svg></button>
-                    <h4 class="modal-title d-flex justify-content-center" style="color: #b478d9;font-family: Roboto, sans-serif;"><i class="material-icons d-flex justify-content-center align-items-center" style="margin-right: 3px;">sentiment_very_satisfied</i>Beginning</h4>
+                <div class="modal-header d-flex justify-content-center" style="background: #b478d9;border-style: none;border-bottom: 6px solid var(--bs-secondary-bg);">
+                    <h4 class="d-flex justify-content-center align-items-center justify-content-xxl-center modal-title" style="color: var(--bs-body-bg);font-family: Roboto, sans-serif;width: 195.328px;font-weight: bold;">GETTING STARTED</h4>
                 </div>
-                <div class="modal-body d-flex justify-content-center align-items-center" style="background: var(--bs-secondary-bg);height: 500px;">
-                    <div class="carousel slide" data-bs-ride="carousel" id="carousel-2" style="height: 600px;">
-                        <div class="carousel-inner h-100">
-                            <div class="carousel-item active h-100"><img class="w-100 d-block position-absolute h-100 fit-cover" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Slide Image" style="z-index: -1;">
-                                <div class="container d-flex flex-column justify-content-center h-100" style="background: url(&quot;assets/img/gfhhfg.svg&quot;);">
-                                    <div class="row">
-                                        <div class="col-md-6 col-xl-4 offset-md-2">
-                                            <div style="max-width: 350px;">
-                                                <h1 class="text-uppercase fw-bold" style="color: rgb(255,255,255);text-shadow: 1px 3px 10px var(--bs-body-bg);">oNE COMPANION<br>APP FOR NGS</h1>
-                                                <p class="my-3">THE ILLUSION APP LET YOU SEE THE THINGS THAT ARE BEYOND AN ILLUSION</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="modal-header d-flex justify-content-start" style="border-bottom-style: none;background: #b478d9;"></div>
+                <div class="modal-body d-flex align-items-center" style="background: #b478d9;height: 100%;width: 100%;border-top-style: none;padding-right: 16px;padding-left: 16px;">
+                    <div class="carousel slide d-flex justify-content-center align-items-center" data-bs-ride="false" id="carousel-2">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div style="width: 380px;height: 580px;color: var(--swiper-theme-color);background: url(&quot;assets/img/fdfsfdsfdsfd.png&quot;) center / cover no-repeat;"></div>
+                                <div class="col-11 offset-0" style="margin-bottom: 56px;text-align: center;height: 100px;width: 100%;"><sup style="font-family: Roboto, sans-serif;font-weight: bold;font-size: 13px;color: var(--bs-body-bg);width: 100%;">The Illusion app is made as a Companion App for the <br>Illusion Allinace! Here you can find new updates about<br>PSO2 and the content that get released.</sup></div>
                             </div>
-                            <div class="carousel-item h-100"><img class="w-100 d-block position-absolute h-100 fit-cover" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Slide Image" style="z-index: -1;">
-                                <div class="container d-flex flex-column justify-content-center h-100" style="background: url(&quot;assets/img/gfhhfg.svg&quot;);">
-                                    <div class="row">
-                                        <div class="col-md-6 col-xl-4 offset-md-2">
-                                            <div style="max-width: 350px;">
-                                                <h1 class="text-uppercase fw-bold">Biben dum<br>fringi dictum, augue purus</h1>
-                                                <p class="my-3">Tincidunt laoreet leo, adipiscing taciti tempor. Primis senectus sapien, risus donec ad fusce augue interdum.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item h-100"><img class="w-100 d-block position-absolute h-100 fit-cover" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Slide Image" style="z-index: -1;">
-                                <div class="container d-flex flex-column justify-content-center h-100" style="background: url(&quot;assets/img/gfhhfg.svg&quot;);">
-                                    <div class="row">
-                                        <div class="col-md-6 col-xl-4 offset-md-2">
-                                            <div style="max-width: 350px;">
-                                                <h1 class="text-uppercase fw-bold">Biben dum<br>fringi dictum, augue purus</h1>
-                                                <p class="my-3">Tincidunt laoreet leo, adipiscing taciti tempor. Primis senectus sapien, risus donec ad fusce augue interdum.</p><a class="btn btn-primary btn-lg me-2" role="button" href="#">Button</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="carousel-item">
+                                <div style="width: 380px;height: 580px;color: var(--swiper-theme-color);background: url(&quot;assets/img/sdadsadsadas.png&quot;) center / cover no-repeat;"></div>
+                                <div class="col-12 offset-1" style="margin-bottom: 56px;text-align: left;height: 100px;width: 100%;"><sup style="font-family: Roboto, sans-serif;font-weight: bold;font-size: 13px;color: var(--bs-body-bg);width: 100%;"><strong>You can find here every content updates you are </strong><br><strong>interested in. Scratches have a dedicated Page </strong><br><strong>same as Task and Content Updates. Every </strong><br><strong>NGS Headline the app gets refreshed with content.</strong><br><br></sup></div>
                             </div>
                         </div>
                         <div><a class="carousel-control-prev" href="#carousel-2" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-2" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
-                        <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-2" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-2" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#carousel-2" data-bs-slide-to="2"></button></div>
+                        <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-2" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-2" data-bs-slide-to="1"></button></div>
                     </div>
                 </div>
             </div>
@@ -734,13 +712,12 @@
                 <div class="container" style="padding-right: 1px;padding-left: 1px;margin-top: 1px;height: 10%;background: var(--bs-secondary-bg);border-radius: 13px;border-color: rgb(44,50,55);width: 100%;box-shadow: 0px 1px 4px 1px rgba(33,33,34,0.51);margin-bottom: 0px;filter: grayscale(0%) saturate(100%);">
                     <div class="row d-flex d-xxl-flex justify-content-end mx-auto justify-content-xxl-end" style="margin-left: 0px;margin-right: 0px;height: 10%;">
                         <div class="col-md-12 d-flex justify-content-center align-items-center justify-content-md-center" style="width: 100%;padding-right: 0px;padding-left: 0px;height: 10%;">
-                            <div class="carousel slide" data-bs-ride="false" id="carousel-1" style="width: 100%;margin-top: 0px;">
+                            <div class="carousel slide" data-bs-ride="false" data-bs-pause="false" id="carousel-1" style="width: 100%;margin-top: 0px;">
                                 <div class="carousel-inner" style="border-top-left-radius: 13px;border-top-right-radius: 13px;">
                                     <div class="carousel-item active"><img class="w-100 d-block" src="https://pso2.com/players/update/2025-04/img/16/01.jpg" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px"></div>
                                     <div class="carousel-item"><img class="w-100 d-block" src="https://pso2.com/players/update/2025-04/img/16/02.jpg" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px"></div>
                                     <div class="carousel-item"><img class="w-100 d-block" alt="Slide Image" style="height: 20%;border-radius: 0px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-right: 0px;" height="411px" src="https://pso2.com/players/update/2025-04/img/16/03.jpg"></div>
                                 </div>
-                                <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
                                 <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="2"></button></div>
                             </div>
                         </div>
@@ -1461,6 +1438,8 @@
     <script src="assets/js/Darkmode.js"></script>
     <script src="assets/js/Navbar%20Pages.js"></script>
     <script src="assets/js/service-worker.js"></script>
+    <script src="assets/js/Simple-Slider-swiper-bundle.min.js"></script>
+    <script src="assets/js/Simple-Slider.js"></script>
     <script src="assets/js/timer_daily.js"></script>
     <script src="assets/js/timer_weekly.js"></script>
     <script src="assets/js/version-check.js"></script>
