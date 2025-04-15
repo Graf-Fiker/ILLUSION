@@ -125,26 +125,33 @@
 <script src="path/to/version-check.js"></script>
 </head>
 
-<body class="d-flex d-xxl-flex align-items-start justify-content-xxl-center align-items-xxl-start" style="background: var(--bs-secondary-bg);height: 530px;z-index: 1;/*overflow-y: hidden;*//*overflow-x: hidden;*/">
-    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvas-1" style="background: var(--bs-secondary-bg);box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);/*backdrop-filter: blur(10px);*/-webkit-backdrop-filter: blur(10px);height: 50%;">
+<body class="d-flex d-xxl-flex align-items-start justify-content-xxl-center align-items-xxl-start" style="background: var(--bs-secondary-bg);height: 530px;z-index: 1;/*overflow-y: hidden;*//*overflow-x: hidden;*/"><script>
+  $(document).ready(function () {
+    // Check if a new version is published (replace this with your actual check logic)
+    var isNewVersionPublished = true;
+
+    // If a new version is published, show the changelog modal
+    if (isNewVersionPublished) {
+      $('#changelogModal').modal('show');
+    }
+  });
+</script>
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="Menu-Scroll-up" style="background: var(--bs-secondary-bg);box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);/*backdrop-filter: blur(10px);*/-webkit-backdrop-filter: blur(10px);height: 50%;border-top-left-radius: 15px;border-top-right-radius: 15px;">
         <div class="offcanvas-header d-flex justify-content-center align-items-center" style="width: 100%;">
-            <div class="col d-flex justify-content-center"><sub></sub><sub style="font-family: Roboto, sans-serif;font-size: 13px;">ILLUSION APP</sub></div>
-            <div class="col d-flex justify-content-center align-items-center"><sub></sub>
-                <div class="d-flex justify-content-center align-items-center" style="width: 30px;height: 30px;background: #b478d9;border-radius: 86px;box-shadow: 0px 0px 5px var(--bs-black);"><button class="btn-close btn-close-white" type="button" aria-label="Close" data-bs-dismiss="offcanvas" style="padding: 0px;padding-left: 0px;padding-right: 0px;margin: 0px;color: var(--bs-btn-close-color);"></button></div>
-            </div>
+            <div class="col d-flex justify-content-center"><sub></sub></div>
+            <div class="col d-flex justify-content-center align-items-center" data-bs-dismiss=""><sub></sub><button class="btn btn-primary" id="small-close-button" type="button" data-bs-dismiss="offcanvas" style="width: 68px;height: 10px;background: #b478d9;border-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;border-left-style: none;"></button></div>
             <div class="col d-flex justify-content-center align-items-center"><sub></sub></div>
         </div>
         <div class="offcanvas-body" style="padding-right: 20px;padding-left: 20px;padding-bottom: 0px;">
             <div class="col" style="padding-bottom: 16px;">
-                <div class="card" style="background: rgba(0,0,0,0.12);-webkit-backdrop-filter: blur(10px);width: 100%;box-shadow: 1px 0px 4px rgb(0,0,0);border-color: #b478d9;">
-                    <div class="card-body d-flex justify-content-center" style="background: rgba(255,255,255,0);border-color: #b478d9;">
-                        <div class="col d-flex justify-content-center align-items-center"><a class="btn btn-primary d-flex justify-content-center" role="button" href="https://pso2na.arks-visiphone.com/wiki/Portal:New_Genesis" style="background: rgba(128,128,128,0.04);box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);-webkit-backdrop-filter: blur(10px);width: 100%;height: 38px;border-color: #b478d9;border-right-color: #b478d9;border-left-color: #b478d9;">Visiphone</a></div>
-                        <div class="col-4" style="width: 23px;"></div>
-                        <div class="col d-flex justify-content-center align-items-center"><a class="btn btn-primary d-flex justify-content-center" role="button" href="https://discord.gg/illusion-ngs " style="background: rgba(133,133,133,0.04);box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);-webkit-backdrop-filter: blur(10px);width: 100%;height: 38px;border-color: #b478d9;">Discord</a></div>
+                <div class="card" style="background: var(--bs-secondary-bg);-webkit-backdrop-filter: blur(10px);width: 100%;box-shadow: 1px 0px 4px rgb(0,0,0);border-color: #b478d9;border-radius: -30px;">
+                    <div class="card-body d-flex justify-content-center" style="border-color: #b478d9;">
+                        <div class="col d-flex justify-content-center align-items-center" style="padding-right: 5px;"><a class="btn btn-primary d-flex justify-content-center" role="button" href="https://pso2na.arks-visiphone.com/wiki/Portal:New_Genesis" style="background: rgba(128,128,128,0.04);box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);-webkit-backdrop-filter: blur(10px);width: 100%;height: 38px;border-color: #b478d9;border-right-color: #b478d9;border-left-color: #b478d9;color: var(--bs-light-text-emphasis);">Visiphone</a></div>
+                        <div class="col d-flex justify-content-center align-items-center" style="padding-left: 5px;"><a class="btn btn-primary d-flex justify-content-center" role="button" href="https://discord.gg/illusion-ngs " style="background: rgba(133,133,133,0.04);box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);-webkit-backdrop-filter: blur(10px);width: 100%;height: 38px;border-color: #b478d9;color: var(--bs-light-text-emphasis);">Discord</a></div>
                     </div>
                 </div>
             </div>
-            <div class="col d-flex justify-content-center align-items-center" style="width: 100%;"><button class="btn btn-primary d-flex d-xxl-flex justify-content-start align-items-center justify-content-xxl-center align-items-xxl-center" type="button" data-bs-dismiss="offcanvas" data-bs-target="#modal-5" data-bs-toggle="modal" style="background: rgba(0,0,0,0.1);box-shadow: -1px 0px 7px rgb(0,0,0);-webkit-backdrop-filter: blur(10px);width: 100%;height: 38px;margin-bottom: 5px;border-color: #b478d9;text-align: left;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-keyboard" style="margin-right: 5px;">
+            <div class="col d-flex justify-content-center align-items-center" style="width: 100%;"><button class="btn btn-primary d-flex d-xxl-flex justify-content-start align-items-center justify-content-xxl-center align-items-xxl-center" type="button" data-bs-dismiss="offcanvas" data-bs-target="#modal-5" data-bs-toggle="modal" style="background: var(--bs-secondary-bg);box-shadow: -1px 0px 7px rgb(0,0,0);-webkit-backdrop-filter: blur(10px);width: 100%;height: 38px;margin-bottom: 5px;border-color: #b478d9;text-align: left;color: var(--bs-light-text-emphasis);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-keyboard" style="margin-right: 5px;">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M2 6m0 2a2 2 0 0 1 2 -2h16a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-16a2 2 0 0 1 -2 -2z"></path>
                         <path d="M6 10l0 .01"></path>
@@ -155,7 +162,7 @@
                         <path d="M18 14l0 .01"></path>
                         <path d="M10 14l4 .01"></path>
                     </svg>Chat Keyword</button></div>
-            <div class="col d-flex justify-content-center align-items-center" style="width: 100%;"><button class="btn btn-primary d-flex justify-content-start align-items-center" type="button" data-bs-dismiss="offcanvas" data-bs-target="#modal-6" data-bs-toggle="modal" style="background: rgba(0,0,0,0.1);-webkit-backdrop-filter: blur(10px);width: 100%;height: 38px;margin-bottom: 5px;border-color: #b478d9;box-shadow: -1px 0px 7px rgb(0,0,0);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-calendar" style="margin-right: 5px;">
+            <div class="col d-flex justify-content-center align-items-center" style="width: 100%;"><button class="btn btn-primary d-flex justify-content-start align-items-center" type="button" data-bs-dismiss="offcanvas" data-bs-target="#modal-6" data-bs-toggle="modal" style="background: var(--bs-secondary-bg);-webkit-backdrop-filter: blur(10px);width: 100%;height: 38px;margin-bottom: 5px;border-color: #b478d9;box-shadow: -1px 0px 7px rgb(0,0,0);color: var(--bs-light-text-emphasis);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-calendar" style="margin-right: 5px;">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
                         <path d="M16 3v4"></path>
@@ -164,17 +171,12 @@
                         <path d="M11 15h1"></path>
                         <path d="M12 15v3"></path>
                     </svg>NGS Roadmap</button></div>
-            <div class="col d-flex justify-content-center align-items-center" style="width: 100%;"><button class="btn btn-primary d-flex justify-content-start align-items-center" type="button" data-bs-dismiss="offcanvas" data-bs-target="#modal-2" data-bs-toggle="modal" style="background: rgba(0,0,0,0.1);-webkit-backdrop-filter: blur(10px);width: 100%;height: 38px;margin-bottom: 5px;border-color: #b478d9;box-shadow: -1px 0px 7px rgb(0,0,0);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-settings-2" style="margin-right: 5px;">
+            <div class="col d-flex justify-content-center align-items-center" style="width: 100%;"><button class="btn btn-primary d-flex justify-content-start align-items-center" type="button" data-bs-dismiss="offcanvas" data-bs-target="#modal-2" data-bs-toggle="modal" style="background: var(--bs-secondary-bg);-webkit-backdrop-filter: blur(10px);width: 100%;height: 38px;margin-bottom: 5px;border-color: #b478d9;box-shadow: -1px 0px 7px rgb(0,0,0);color: var(--bs-light-text-emphasis);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-settings-2" style="margin-right: 5px;">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z"></path>
                         <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
                     </svg>App Settings</button></div>
-            <div class="col d-flex justify-content-center align-items-center" style="width: 100%;"><button class="btn btn-primary d-flex justify-content-start align-items-center" type="button" data-bs-dismiss="offcanvas" data-bs-target="#modal-3" data-bs-toggle="modal" style="background: rgba(0,0,0,0.1);-webkit-backdrop-filter: blur(10px);width: 100%;height: 38px;margin-bottom: 5px;border-color: #b478d9;box-shadow: -1px 0px 7px rgb(0,0,0);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-settings-2" style="margin-right: 5px;">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z"></path>
-                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                    </svg>Getting Started</button></div>
-            <div class="col d-flex justify-content-center align-items-center" style="width: 100%;font-weight: bold;"><button class="btn btn-primary d-flex justify-content-start align-items-center" type="button" data-bs-dismiss="offcanvas" data-bs-target="#modal-1" data-bs-toggle="modal" style="background: rgba(0,0,0,0.1);-webkit-backdrop-filter: blur(10px);width: 100%;height: 38px;margin-bottom: 5px;border-color: #b478d9;box-shadow: -1px 0px 7px rgb(0,0,0);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-moneybag" style="margin-right: 5px;">
+            <div class="col d-flex justify-content-center align-items-center" style="width: 100%;font-weight: bold;"><button class="btn btn-primary d-flex justify-content-start align-items-center" type="button" data-bs-dismiss="offcanvas" data-bs-target="#modal-1" data-bs-toggle="modal" style="background: var(--bs-secondary-bg);-webkit-backdrop-filter: blur(10px);width: 100%;height: 38px;margin-bottom: 5px;border-color: #b478d9;box-shadow: -1px 0px 7px rgb(0,0,0);color: var(--bs-light-text-emphasis);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-moneybag" style="margin-right: 5px;">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M9.5 3h5a1.5 1.5 0 0 1 1.5 1.5a3.5 3.5 0 0 1 -3.5 3.5h-1a3.5 3.5 0 0 1 -3.5 -3.5a1.5 1.5 0 0 1 1.5 -1.5z"></path>
                         <path d="M4 17v-1a8 8 0 1 1 16 0v1a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
@@ -253,17 +255,16 @@
                 <div class="col-12 d-flex d-xxl-flex justify-content-center justify-content-xxl-center" style="padding-top:10px;padding-bottom:10px;background:var(--bs-secondary-bg);border-top-style:solid;border-top-color:#b478d9;"><button class="btn btn-light" data-bs-dismiss="modal" style="background:rgba(248,249,250,0);border-style:solid;border-color:#b478d9;border-radius:218px;height:40px;width:40px;" type="button"><svg class="d-flex justify-content-start align-items-end" fill="currentColor" height="1em" style="color:#b478d9;width:23px;height:26px;margin:0px;margin-left:-4px;" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg></button></div>
             </div>
         </div>
-    </div><script>
-  $(document).ready(function () {
-    // Check if a new version is published (replace this with your actual check logic)
-    var isNewVersionPublished = true;
-
-    // If a new version is published, show the changelog modal
-    if (isNewVersionPublished) {
-      $('#changelogModal').modal('show');
-    }
-  });
-</script>
+    </div>
+    <header class="d-flex justify-content-center align-items-center" id="mainNavbar" style="height: 47px;position: fixed;background: var(--bs-body-bg);width: 100%;padding-left: 5px;padding-bottom: 7px;padding-right: 5px;padding-top: 5px;">
+        <div class="col d-flex justify-content-start align-items-center" style="padding-left: 0px;"><button class="btn btn-primary active" type="button" style="height: 35px;width: 35px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;padding-left: 0px;background: url(&quot;assets/img/eddfeddewd.png&quot;) center / cover;border-radius: 220px;border-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;border-left-style: none;z-index: 1;box-shadow: 0px 0px 3px rgb(0,0,0);"></button>
+            <div class="d-flex justify-content-center align-items-center" style="width: 86px;height: 20px;background: linear-gradient(94deg, var(--bs-secondary-bg) 26%, #b478d9), #b478d9;margin-left: -21px;border-radius: 172px;padding-bottom: 8px;padding-left: 13px;box-shadow: 0px 0px 3px var(--bs-body-bg);"><sub style="font-weight: bold;font-family: 'Roboto Flex', sans-serif;padding-top: 3px;padding-left: 4px;color: var(--bs-light-text-emphasis);">ILLUSION</sub></div>
+        </div>
+        <div class="col d-flex justify-content-end align-items-center"><button class="btn btn-primary d-flex justify-content-center align-items-center" type="button" style="height: 21px;width: 21px;padding-right: 1px;padding-top: 0px;padding-bottom: 0px;padding-left: 0px;border-radius: 220px;border-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;border-left-style: none;z-index: 1;background: rgba(180,120,217,0);" data-bs-target="#Menu-Scroll-up" data-bs-toggle="offcanvas"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="d-flex justify-content-center align-items-center" style="color: var(--bs-light-text-emphasis);">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                </svg></button></div>
+    </header>
     <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
         <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down" role="document">
             <div class="modal-content">
@@ -691,17 +692,14 @@
             </div>
         </div>
     </div>
-    <div class="d-flex justify-content-center navbar" style="background: var(--bs-secondary-bg);height: 67px;padding-top: 7px;z-index: 6;border-top: 2px solid #b478d9;"><button class="btn btn-primary d-flex justify-content-center align-items-center" id="center-button" type="button" style="margin-bottom: 62px;position: absolute;background: rgb(180,120,217);width: 70px;border-bottom-right-radius: 30px;border-bottom-left-radius: 30px;border-top-left-radius: 30px;border-top-right-radius: 30px;background: rgb(180,120,217);box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.42);backdrop-filter: blur(10px);/*-webkit-backdrop-filter: blur(10px);*/height: 50%;border: 117px none rgb(0,0,0);border-top: 1px none rgb(0,0,0);border-right-width: 1px;border-right-style: none;border-bottom-style: none;border-left-width: 1px;border-left-style: none;" data-bs-target="#offcanvas-1" data-bs-toggle="offcanvas"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" style="color: var(--bs-white);">
-                <path d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-            </svg></button>
+    <div class="d-flex justify-content-center navbar" style="background: var(--bs-secondary-bg);height: 67px;padding-top: 7px;z-index: 6;border-top: 2px solid #b478d9;">
         <div style="background: #f50000;"></div>
         <div class="col d-flex justify-content-center align-items-end" style="/*padding-top: -0px;*/margin-top: -2px;"><button class="active nav-btn" data-bss-hover-animate="pulse" data-tab="page1"><i class="fas fa-ticket-alt" style="border-color: rgb(255,255,255);"></i><p>Scratch</p></button></div>
-        <div class="col d-flex justify-content-center"><button data-bss-hover-animate="pulse" class="nav-btn" data-tab="page2"><i class="fas fa-tasks" style="border-color: rgb(255,255,255);color: var(--bs-emphasis-color);"></i><p>Task</p></button></div>
+        <div class="col d-flex justify-content-center"><button data-bss-hover-animate="pulse" class="nav-btn" data-tab="page2"><i class="fas fa-tasks" style="border-color: rgb(255,255,255);"></i><p>Task</p></button></div>
         <div class="col d-flex justify-content-center"><button data-bss-hover-animate="pulse" class="nav-btn" data-tab="page3"><i class="far fa-newspaper" style="border-color: rgb(255,255,255);"></i><p>News</p></button></div>
     </div>
     <div class="tabs-container">
-        <div id="page1" class="tab-content active" style="margin-top: 0px;background: var(--bs-secondary-bg);overflow-y: scroll;height: 93%;border-style: none;" data-tab="page1">
+        <div id="page1" class="tab-content active" style="margin-top: 48px;background: var(--bs-secondary-bg);overflow-y: scroll;height: 93%;border-style: none;" data-tab="page1">
             <div class="col d-flex d-xxl-flex justify-content-center align-items-center mx-auto justify-content-xxl-center align-items-xxl-center" id="Date-break-2" style="margin-bottom: 20px;margin-top: 15px;">
                 <div style="width: 90%;height: 3px;background: radial-gradient(#b478d9, var(--bs-secondary-bg)), #b478d9;position: absolute;z-index: 1;border-radius: 58px;"></div>
                 <div class="d-flex justify-content-center align-items-center" style="width: 25%;height: 25px;background: #b478d9;border-radius: 64px;z-index: 2;">
@@ -1009,7 +1007,7 @@
                 </div>
             </div>
         </div>
-        <div id="page2" class="tab-content" style="margin-top: 5px;height: 90%;overflow: auto scroll;position: absolute;">
+        <div id="page2" class="tab-content" style="margin-top: 48px;height: 90%;overflow: auto scroll;position: absolute;">
             <div class="col d-flex d-xxl-flex justify-content-center align-items-center mx-auto justify-content-xxl-center align-items-xxl-center" id="Date-break-1" style="margin-bottom: 20px;margin-top: 10px;">
                 <div style="width: 90%;height: 3px;background: radial-gradient(#b478d9, var(--bs-secondary-bg)), #b478d9;position: absolute;z-index: 1;border-radius: 58px;"></div>
                 <div class="d-flex justify-content-center align-items-center" style="width: 25%;height: 25px;background: #b478d9;border-radius: 64px;z-index: 2;">
@@ -1163,7 +1161,7 @@
                 </div>
             </div>
         </div>
-        <div id="page3" class="tab-content" style="margin-top: 5px;height: 90%;overflow: auto scroll;">
+        <div id="page3" class="tab-content" style="margin-top: 48px;height: 90%;overflow: auto scroll;">
             <div class="col d-flex d-xxl-flex justify-content-center align-items-center mx-auto justify-content-xxl-center align-items-xxl-center" id="Date-break-4" style="margin-bottom: 20px;margin-top: 10px;">
                 <div style="width: 90%;height: 3px;background: radial-gradient(#b478d9, var(--bs-secondary-bg)), #b478d9;position: absolute;z-index: 1;border-radius: 58px;"></div>
                 <div class="d-flex justify-content-center align-items-center" style="width: 25%;height: 25px;background: #b478d9;border-radius: 64px;z-index: 2;">
@@ -1419,12 +1417,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="toast fade hide" role="alert" data-bs-autohide="false" id="toast-1" style="background: rgba(0,119,238,0.85);position: relative;z-index: 1;">
-        <div class="toast-header"><img class="me-2"><strong class="me-auto">Title</strong><small>10 min ago</small><button class="btn-close ms-2 mb-1 close" type="button" aria-label="Close" data-bs-dismiss="toast"></button></div>
-        <div class="toast-body" role="alert">
-            <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
