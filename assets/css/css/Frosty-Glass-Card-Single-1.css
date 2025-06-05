@@ -1,0 +1,19 @@
+@media (min-width: 1400px) {
+  #page1 {
+    width: 32%;
+    height: 849px;
+    padding-bottom: 3px;
+    margin-left: 2%;
+  }
+}
+
+@media (min-width: 1400px) {
+  #page2 {
+    display: block;
+    width: 32%;
+    left: 0;
+    margin-left: 34%;
+    overflow-y: scroll;
+  }
+}
+
